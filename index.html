@@ -5,17 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!--  icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+    <!--  boostrap 5.3 local -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
+    <!-- my css -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- bootstrap javaScript -->
     <script src="js/bootstrap.min.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
 
 </head>
 <body class="fundo-fixo">
     <!-- area de menu ---------- um dia será em arquivo externo.  -->
+     <nav class="navbar navbar-expand-xl fixed-top">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">
+                <img src="/images/logo/montaro-logo-white.png" alt>
+            </a>
+            <button class="navbar-toggler" 
+            type="button" 
+            data-bs-target="#menuPublico" 
+            data-bs-toggle="collapse" 
+            aria-controls="menuPublico"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            >
+                <span class="bi bi-three-dots"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPublico">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0 gap-2" >
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active" aria-current="page">
+                            <i class="bi bi-house-door-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Destaques
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Produtos
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tipos 
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-light">
+    
+                            <li>
+                                <a href="#" class="dropdown-item">Churrasco</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">Bedidas</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">Sobremesa</a>
+                            </li>
+    
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contato" class="nav-link">
+                            Contato
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <form action="" class="d-flex" role="search">
+                            <input type="text" class="form-control me-2" placeholder="Buscar produto" aria-label="Search" required>
+                            <button class="btn btn-outline-light">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="bi bi-person-fill"></i> &nbsp; admin/cliente
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+     </nav>
+     <main class="container">
+        <div class="mensagem-inicial">
+
+        </div>
+        <section>
+            <h2 class="alert alert-sucess">
+                Produtos
+            </h2>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 mb-4">
+                    <div class="card box-shadow-sm">
+                        <img src="/images/products/chuleta.png" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                Chuleta
+                            </h3>
+                            <p class="card-text">
+                                Corte bovino com osso, a chuleta é conhecida pelo sabor forte e pela suculência. Ideal para quem busca uma experiência de churrasco robusta e cheia de personalidade.
+                            </p>
+                            <a href="#" class="btn btn-dark">
+                                <span class="d-none d-sm-inline">Saiba Mais</span> &nbsp;
+                                <i class="bi bi-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> <!-- final card-->
+                <div class="col-sm-6 col-md-4 mb-4">
+                    <div class="card box-shadow-sm">
+                        <img src="/images/products/cupim.png" alt="" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                Cupim
+                            </h3>
+                            <p class="card-text">
+                                Corte bovino tradicional, o cupim é assado lentamente, resultando em uma carne extremamente macia e saborosa. Ideal para quem ama um bom churrasco.
+                            </p>
+                            <a href="#" class="btn btn-dark">
+                                <span class="d-none d-sm-inline">Saiba Mais</span> &nbsp;
+                                <i class="bi bi-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> <!-- final card-->
+                
+            </div>
+        </section>
+    </main>
+    <footer class="rounded-top " id="contato">
+        <div class="row">
+            <div class="col-md-4 mb-4 text-white">
+                <img src="/images/logo/logo-white.png" alt="" class="mb-2">
+                <br>
+                <p><i><strong>O melhor churrasco da Zona Leste</strong></i></p>
+                <address>
+                    <i class="bi bi-pin-fill"></i> Avenida Itaquera, 8266 - Itaquera São Paulo - SP - 08295000
+                    <br>
+                    <i class="bi bi-telephone-fill"></i> (11) 997941030
+                    <br>
+                    <i class="bi bi-envelope-fill"></i>
+                    <a href="mailto:contato@montaro.com.br?subject=Contato do Site" class="text-decoration-none">
+                        contato@montaro.com.br
+                    </a>
+                </address>
+                <div class="ratio ratio-4x3">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5480.546132356433!2d-46.45672334656811!3d-23.538768851311122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce66bf22458913%3A0xecdac462b58a9475!2sSenac%20Itaquera!5e0!3m2!1spt-BR!2sbr!4v1755874043166!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+                </div>
+            </div>
+        </div>
+    </footer>
     
 </body>
 </html>

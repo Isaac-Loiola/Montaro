@@ -3,9 +3,10 @@
 /* Interpretação de lingua */
 @charset "utf8";
 
-body{
-    margin-top: 40px;
-    padding-top: 40px;
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: 'cal sans';
 }
 
 .fundo-fixo{
@@ -13,3 +14,11 @@ body{
     background-color: #fff;
     -webkit-background-size:cover;
 }
+
+main{
+    padding-top: 80px;
+    border-radius: 8px;
+    /* background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); */
+}
+
