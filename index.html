@@ -19,94 +19,103 @@
     <script src="js/bootstrap.bundle.min.js" defer></script>
 
 </head>
-<body class="fundo-fixo">
-    <header>
+<body>
+    <header  class="fundo-fixo d-flex">
         <!-- area de menu ---------- um dia será em arquivo externo.  -->
-     <nav class="navbar navbar-expand-xl fixed-top">
-        <div class="container-fluid">
-            <a href="index.html" class="navbar-brand">
-                <img src="/images/logo/montaro-logo-white.png" alt>
-            </a>
-            <button class="navbar-toggler" 
-            type="button" 
-            data-bs-target="#menuPublico" 
-            data-bs-toggle="collapse" 
-            aria-controls="menuPublico"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            >
-                <span class="bi bi-three-dots"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="menuPublico">
-                <ul class="navbar-nav ms-auto mb-2 mb-md-0 gap-2" >
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link active" aria-current="page">
-                            <i class="bi bi-house-door-fill"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            Destaques
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            Produtos
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Tipos 
-                        </a>
-                        <ul class="dropdown-menu">
-    
-                            <li>
-                                <a href="#" class="dropdown-item">Churrasco</a>
-                            </li>
-                            <li>
-                                <a href="#" class="dropdown-item">Bedidas</a>
-                            </li>
-                            <li>
-                                <a href="#" class="dropdown-item">Sobremesa</a>
-                            </li>
-    
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contato" class="nav-link">
-                            Contato
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <form action="" class="d-flex" role="search">
-                            <input type="text" class="form-control me-2" placeholder="Buscar produto" aria-label="Search" required>
-                            <button class="btn btn-outline-light">
-                                <i class="bi bi-search"></i>
-                            </button>
-                        </form>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="bi bi-person-fill"></i> &nbsp; admin/cliente
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            
-        </div>
-     </nav>
-     
+    <div class="">
+        <nav class="navbar navbar-expand-xl fixed-top ">
+           <div class="container-fluid">
+               <a href="index.html" class="navbar-brand">
+                   <img src="/images/logo/montaro-logo-white.png" alt>
+               </a>
+               <button class="navbar-toggler" 
+               type="button" 
+               data-bs-target="#menuPublico" 
+               data-bs-toggle="collapse" 
+               aria-controls="menuPublico"
+               aria-expanded="false"
+               aria-label="Toggle navigation"
+               >
+                   <span class="bi bi-three-dots"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="menuPublico">
+                   <ul class="navbar-nav ms-auto mb-2 mb-md-0 gap-2" >
+                       <li class="nav-item">
+                           <a href="index.html" class="nav-link active" aria-current="page">
+                               <i class="bi bi-house-door-fill text-white"></i>
+                           </a>
+                       </li>
+                       <li class="nav-item ">
+                           <a href="#" class="nav-link text-white">
+                               Destaques
+                           </a>
+                       </li>
+                       <li class="nav-item">
+                           <a href="#" class="nav-link text-white">
+                               Produtos
+                           </a>
+                       </li>
+                       <li class="nav-item dropdown">
+                           <a href="#" class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                               Tipos 
+                           </a>
+                           <ul class="dropdown-menu">
+       
+                               <li>
+                                   <a href="#" class="dropdown-item">Churrasco</a>
+                               </li>
+                               <li>
+                                   <a href="#" class="dropdown-item">Bedidas</a>
+                               </li>
+                               <li>
+                                   <a href="#" class="dropdown-item">Sobremesa</a>
+                               </li>
+       
+                           </ul>
+                       </li>
+                       <li class="nav-item">
+                           <a href="#contato" class="nav-link text-white">
+                               Contato
+                           </a>
+                       </li>
+                       <li class="nav-item">
+                           <form action="" class="d-flex" role="search">
+                               <input type="text" class="form-control me-2" placeholder="Buscar produto" aria-label="Search" required>
+                               <button class="btn btn-outline-light">
+                                   <i class="bi bi-search"></i>
+                               </button>
+                           </form>
+                       </li>
+                       <li class="nav-item"> 
+                           <a href="#" class="nav-link text-white">
+                               <i class="bi bi-person-fill"></i> &nbsp; admin/cliente
+                           </a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+        </nav>
+    </div>
+
+     <div class="description-header container d-flex flex-column align-self-center text-white">
+        <h1 class="title-header">Seja bem vindo ao <span class="text-white-50">Montaro</span></h1>
+        <p class="paragraph-header w-50">
+            Em nossa casa, cada detalhe é pensado para oferecer uma experiência única. Na Montaro Churrascaria, tradição, qualidade e excelência se encontram para proporcionar aos nossos clientes o melhor da gastronomia brasileira, com cortes nobres, ambiente sofisticado e um atendimento que valoriza cada visita.
+        </p>
+        <button class="btn btn-cardapio">Cardápio</button>
+     </div>
+
     </header>
      <main class="container">
         <div class="mensagem-inicial">
 
         </div>
-        <section>
+        <section >
             <h2 class="alert alert-sucess">
                 Produtos
             </h2>
             <div class="row">
-                <div class="col-sm-6 col-md-4 mb-4">
+                <div class="col-sm-6 col-md-4 mb-4 shadow-sm">
                     <div class="card box-shadow-sm">
                         <img src="/images/products/chuleta.png" alt="" class="card-img-top">
                         <div class="card-body">
@@ -123,7 +132,7 @@
                         </div>
                     </div>
                 </div> <!-- final card-->
-                <div class="col-sm-6 col-md-4 mb-4">
+                <div class="col-sm-6 col-md-4 mb-4 shadow-sm">
                     <div class="card box-shadow-sm">
                         <img src="/images/products/cupim.png" alt="" class="card-img-top">
                         <div class="card-body">
