@@ -26,6 +26,10 @@ nav{
     border: none;
 }
 
+.name-project{
+    color: #92140c;
+}
+
 .paragraph-header{
     font-size: 18px;
 }
@@ -62,4 +66,8 @@ main{
 
 .btn-dark{
     background-color: #000;
+}
+
+footer{
+    background-color: #92140c;
 }
