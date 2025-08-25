@@ -65,9 +65,10 @@ main{
 
 
 .btn-dark{
+    border: none;
     background-color: #000;
 }
 
 footer{
-    background-color: #92140c;
+    background-color: #0c0f0a;
 }
