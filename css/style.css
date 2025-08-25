@@ -9,6 +9,10 @@
     font-family: 'cal sans';
 }
 
+body{
+    background-color: #fafafaf1;
+}
+
 .fundo-fixo{
     background: url(../images/banners/banner-fire.png) no-repeat ;
     background-color: #fff;
