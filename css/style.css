@@ -65,8 +65,15 @@ main{
     width: 100px;
 }
 
+.paragraph{
+    font-family: 'jost';
+    font-weight: 500;
+    font-size: 18px;
+}
 
-
+li{
+    list-style: none;
+}
 
 .btn-dark{
     border: none;
