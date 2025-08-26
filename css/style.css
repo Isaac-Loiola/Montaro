@@ -35,7 +35,9 @@ nav{
 }
 
 .paragraph-header{
-    font-size: 18px;
+    font-family: 'jost';
+    font-weight: 500;
+    font-size: 19px;
 }
 
 main{
@@ -60,6 +62,10 @@ main{
     border-radius: 10px 10px 0 0 ;
 }
 
+.card-text{
+    font-family: 'jost';
+    font-weight: 500;
+}
 .btn-cardapio{
     background-color: #fff;
     width: 100px;
