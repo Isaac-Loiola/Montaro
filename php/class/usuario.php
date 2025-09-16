@@ -9,9 +9,9 @@ class Usuario{
 
     // Atributos
     private $id;
-    private $nome;
-    private $email;
-    private $datacad;
+    private $login;
+    private $senha;
+    private $nivel;
 
     private $pdo;
 
@@ -24,34 +24,39 @@ class Usuario{
         return $this->id; // o banco é quem atribui 
     }
 
-    public function getNome(){
-        return $this->nome;
+    public function getLogin(){
+        return $this->login;
     }
 
-    public function setNome($nome){
-        $this->nome = $nome;
+    public function setLogin($login){
+        $this->login = $login;
     }
 
-    public function getEmail(){
-        return $this->email;
+    public function getSenha(){
+        return $this->senha;
     }
 
-    public function setEmail($email){
-        $this->email = $email;
+    public function setSenha($senha){
+        $this->senha = $senha;
     }
 
-    public function getDataCad(){
-        return $this->datacad;
+    public function getNivel(){
+        return $this->nivel;
+    }
+
+    public function setNivel($nivel){
+        $this->nivel = $nivel;
     }
 
     // inserindo usuario
     public function inserir() : bool {
-        $sql = "insert into usuarios (nome, email, datacad)
-        values (:nome, :email, default)";
+        $sql = "insert into usuarios (login, senha, nivel)
+        values (:login, md5(:senha), :nivel)";
 
         $cmd = $this->pdo->prepare($sql);
-        $cmd->bindValue(":nome", $this->nome);
-        $cmd->bindValue(":email", $this->email);
+        $cmd->bindValue(":login", $this->login);
+        $cmd->bindValue(":senha", $this->senha);
+        $cmd->bindValue(":nivel", $this->nivel);
         $cmd->execute();
 
         if($cmd->execute()){
@@ -75,9 +80,28 @@ class Usuario{
             $dados = $cmd->fetch();
 
             $this->id = $dados['id'];
-            $this->nome = $dados['nome'];
-            $this->email = $dados['email'];
-            $this->datacad = $dados['datacad'];
+            $this->login = $dados['login'];
+            $this->senha = $dados['senha'];
+            $this->nivel = $dados['nivel'];
+
+            return true;
+        }
+        return false;
+    }
+
+    public function efetuarLogin(string $loginInformado, string $senhaInformada) : bool{
+        $sql = "select * from usuarios where login = :login and senha = md5(:senha)";
+        $cmd = $this->pdo->prepare($sql);
+        $cmd->bindValue(":login", $loginInformado);
+        $cmd->bindValue(":senha", $senhaInformada);
+        $cmd->execute();
+        if($cmd->rowCount() > 0 ){
+            $dados = $cmd->fetch();
+
+            $this->id = $dados['id'];
+            $this->login = $dados['login'];
+            $this->senha = $dados['senha'];
+            $this->nivel = $dados['nivel'];
 
             return true;
         }
@@ -88,10 +112,22 @@ class Usuario{
         $id = $idUpdate;
         if(!$this->id) return false;
 
-        $sql = "update usuarios set nome = :nome, email = :email where id = :id";
+        $sql = "update usuarios set login = :login, nivel = :nivel where id = :id";
         $cmd = $this->pdo->prepare($sql);
-        $cmd->bindValue(":nome", $this->nome);
-        $cmd->bindValue(":email", $this->email);
+        $cmd->bindValue(":login", $this->login);
+        $cmd->bindValue(":nivel", $this->nivel);
+        $cmd->bindValue(":id", $this->id, PDO::PARAM_INT);
+
+        return $cmd->execute();
+    }
+
+    public function alterarSenha($novaSenha, $idUpdate){
+        $id = $idUpdate;
+        if(!$this->id) return false;
+
+        $sql = "update usuarios set senha = md5(:senha) where id = :id";
+        $cmd = $this->pdo->prepare($sql);
+        $cmd->bindValue(":senha", $novaSenha);
         $cmd->bindValue(":id", $this->id, PDO::PARAM_INT);
 
         return $cmd->execute();
