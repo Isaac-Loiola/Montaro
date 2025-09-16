@@ -3,7 +3,7 @@
         static $pdo;
         if( $pdo === null){
             $pdo = new PDO(
-                "mysql:host=10.91.47.77;dbname=modelophp_db", 
+                "mysql:host=10.91.47.77;dbname=tdszuphpdb01", 
                 "root", 
                 "123",
                 [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, 
@@ -13,4 +13,3 @@
         }
         return $pdo;
     }
-?>
