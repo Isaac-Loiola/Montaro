@@ -42,7 +42,7 @@ include "class/produto.php";
                         <p class="card-text">
                             <?="R$ ".number_format($prod['valor'], 2, ',', '.')?>
                         </p>
-                        <a href="#detalhes_produto.php?id=<?= $prod['id'] ?>" class="btn btn-dark">
+                        <a href="detalhes_produto.php?id=<?= $prod['id'] ?>" class="btn btn-dark">
                             <span class="d-none d-sm-inline">Saiba Mais</span> &nbsp;
                             <i class="bi bi-eye"></i>
                         </a>

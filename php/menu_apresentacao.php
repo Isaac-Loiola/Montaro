@@ -1,3 +1,12 @@
+<?php 
+    include_once 'class/db.php';
+
+    $pdo = getConnection();
+    $tipo_lista = $pdo->query("select * from tipos");
+    $tipos = $tipo_lista->fetchAll();
+
+?>
+
 <header  class="fundo-fixo d-flex">
         <!-- area de menu ---------- um dia será em arquivo externo.  -->
     <div class="">
@@ -53,17 +62,11 @@
                                Tipos 
                            </a>
                            <ul class="dropdown-menu">
-       
-                               <li>
-                                   <a href="#" class="dropdown-item">Churrasco</a>
-                               </li>
-                               <li>
-                                   <a href="#" class="dropdown-item">Bedidas</a>
-                               </li>
-                               <li>
-                                   <a href="#" class="dropdown-item">Sobremesa</a>
-                               </li>
-       
+                                <?php foreach ($tipos as $tipo) :?>
+                                    <li>
+                                        <a href="#" class="dropdown-item"><?= $tipo['rotulo']?></a>
+                                    </li>
+                                <?php endforeach; ?>
                            </ul>
                        </li>
                        <li class="nav-item">

@@ -1,5 +1,5 @@
 <?php 
-    include 'class/db.php';
+    include_once 'class/db.php';
 
     $pdo = getConnection();
     $tipo_lista = $pdo->query("select * from tipos");
@@ -61,15 +61,11 @@
                            </a>
                            <ul class="dropdown-menu">
        
-                               <li>
-                                   <a href="#" class="dropdown-item">Churrasco</a>
-                               </li>
-                               <li>
-                                   <a href="#" class="dropdown-item">Bedidas</a>
-                               </li>
-                               <li>
-                                   <a href="#" class="dropdown-item">Sobremesa</a>
-                               </li>
+                           <?php foreach ($tipos as $tipo) :?>
+                                    <li>
+                                        <a href="#" class="dropdown-item"><?= $tipo['rotulo']?></a>
+                                    </li>
+                                <?php endforeach; ?>
        
                            </ul>
                        </li>
