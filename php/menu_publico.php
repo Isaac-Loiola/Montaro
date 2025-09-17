@@ -7,9 +7,7 @@
 
 ?>
 
-<header  >
-        <!-- area de menu ---------- um dia será em arquivo externo.  -->
-    <div class="">
+
         <nav class="navbar navbar-expand-xl fixed-top ">
            <div class="container-fluid">
                <a href="index.html" class="navbar-brand">
@@ -97,14 +95,3 @@
                </div>
            </div>
         </nav>
-    </div>
-
-     <div class="description-header container d-flex flex-column align-self-center text-white">
-         <h1 class="title-header">Seja bem vindo ao <img src="../images/logo/montaro-logo-red.png" alt=""></h1>
-        <p class="paragraph-header w-50" id="about-us">
-            Em nossa casa, cada detalhe é pensado para oferecer uma experiência única. Na Montaro Churrascaria, tradição, qualidade e excelência se encontram para proporcionar aos nossos clientes o melhor da gastronomia brasileira, com cortes nobres, ambiente sofisticado e um atendimento que valoriza cada visita.
-        </p>
-            <a href="#products" class="text-decoration-none btn btn-cardapio">Cardápio</a>
-     </div>
-
-    </header>
