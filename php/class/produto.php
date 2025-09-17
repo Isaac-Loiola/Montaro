@@ -105,7 +105,7 @@ class Produto{
         return $cmd->fetchAll();
     }
 
-    public function obterPorId(int $id) : Produto{
+    public function obterPorId(int $id) : array{
         $sql = "select * from produtos where id = :id";
         $cmd = $this->pdo->prepare($sql);
         $cmd->bindValue(":id", $id);
@@ -120,11 +120,9 @@ class Produto{
             $this->valor = $dados['valor'];
             $this->imagem = $dados['imagem'];
             $this->destaque = $dados['destaque'];
-
-            return $this;
         }
 
-        return $this;
+        return $dados;
     }
 
 

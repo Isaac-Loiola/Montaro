@@ -39,7 +39,7 @@
             <a href="index.php" class="text-decoration-none text-dark">
                 <i class="bi bi-caret-left-fill"></i>
                 Detalhes do Produto
-                <?= $produto->getDescricao(); ?>
+                <?= $produto['descricao']; ?>
             </a>
         </h2>
     </main>
