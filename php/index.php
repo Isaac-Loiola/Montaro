@@ -24,7 +24,16 @@
 
 </head>
 <body>
-    <!-- area de menu -->
-     <?php include 'menu_publico.php'?>
+    <header>
+        <!-- area de menu -->
+         <?php include 'menu_publico.php'?>
+    </header>
+    <main class="container">
+        <!-- Area de carrousel -->
+         <!-- <?php include "apresentacao.php"?> -->
+
+        <a href="#destaques">destaque</a>
+        <?php include "destaques.php"?>
+    </main>
 </body>
 </html>

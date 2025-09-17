@@ -95,8 +95,13 @@ class Produto{
         return false;
     }
 
-    public function listar() : array{
-        $cmd = $this->pdo->query("select * from vw_produtos order by id desc");
+    // Método para listar todos os produtos!
+    public function listar(int $destaque = 0) : array{
+        if($destaque == 0)
+            $cmd = $this->pdo->query("select * from vw_produtos order by id desc");
+        else
+            $cmd = $this->pdo->query("select * from vw_produtos where destaque = 1 order by id desc");
+
         return $cmd->fetchAll();
     }
 

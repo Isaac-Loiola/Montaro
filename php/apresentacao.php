@@ -1,17 +1,9 @@
-<?php 
-    include 'class/db.php';
 
-    $pdo = getConnection();
-    $tipo_lista = $pdo->query("select * from tipos");
-    $tipos = $tipo_lista->fetchAll();
-
-?>
-
-
+<div class="">
         <nav class="navbar navbar-expand-xl fixed-top ">
            <div class="container-fluid">
                <a href="index.html" class="navbar-brand">
-                   <img src="../images/logo/montaro-logo-white.png" alt>
+                   <img src="images/logo/montaro-logo-white.png" alt>
                </a>
                <button class="navbar-toggler" 
                type="button" 
@@ -26,7 +18,7 @@
                <div class="collapse navbar-collapse" id="menuPublico">
                    <ul class="navbar-nav ms-auto mb-2 mb-md-0 gap-2" >
                        <li class="nav-item">
-                           <a href="index.php" class="nav-link active" aria-current="page">
+                           <a href="index.html" class="nav-link active" aria-current="page">
                                <i class="bi bi-house-door-fill text-white"></i>
                            </a>
                        </li>
@@ -61,11 +53,15 @@
                            </a>
                            <ul class="dropdown-menu">
        
-                           <?php foreach($tipos as $tipo) :?>
-                                <li>
-                                    <a href="produto_por_tipo?tipo_id=<?= $tipo['id']; ?>" class="dropdown-item"><?= $tipo['rotulo']?></a>
-                                </li>
-                            <?php endforeach?>
+                               <li>
+                                   <a href="#" class="dropdown-item">Churrasco</a>
+                               </li>
+                               <li>
+                                   <a href="#" class="dropdown-item">Bedidas</a>
+                               </li>
+                               <li>
+                                   <a href="#" class="dropdown-item">Sobremesa</a>
+                               </li>
        
                            </ul>
                        </li>
@@ -91,5 +87,12 @@
                </div>
            </div>
         </nav>
+    </div>
 
-     
+     <div class="description-header container d-flex flex-column align-self-center text-white">
+         <h1 class="title-header">Seja bem vindo ao <img src="images/logo/montaro-logo-red.png" alt=""></h1>
+        <p class="paragraph-header w-50" id="about-us">
+            Em nossa casa, cada detalhe é pensado para oferecer uma experiência única. Na Montaro Churrascaria, tradição, qualidade e excelência se encontram para proporcionar aos nossos clientes o melhor da gastronomia brasileira, com cortes nobres, ambiente sofisticado e um atendimento que valoriza cada visita.
+        </p>
+            <a href="#products" class="text-decoration-none btn btn-cardapio">Cardápio</a>
+     </div>
