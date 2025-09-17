@@ -94,3 +94,7 @@ li{
 footer{
     background-color: #0c0f0a;
 }
+
+.btn-destaque{
+    cursor: default;
+}

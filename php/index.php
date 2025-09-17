@@ -24,15 +24,14 @@
 
 </head>
 <body>
-    <header>
+    <!-- header -->
         <!-- area de menu -->
          <?php include 'menu_publico.php'?>
-    </header>
-    <main class="container">
-        <!-- Area de carrousel -->
-         <!-- <?php include "apresentacao.php"?> -->
+    <!-- header -->
 
-        <a href="#destaques">destaque</a>
+    <main class="container"> 
+        <?php include "historia.php"?>
+
         <?php include "destaques.php"?>
     </main>
 </body>
