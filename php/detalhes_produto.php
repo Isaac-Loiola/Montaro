@@ -4,7 +4,7 @@
     if(isset($_GET['id'])){
         $id = $_GET['id'];
         $produto = new Produto();
-        $produto = $produto->obterPorId($id);
+        $prod = $produto->obterPorId($id);
     }
 ?>
 
@@ -34,14 +34,39 @@
         <?php include 'menu_publico.php'?>
     </header>
 
-    <main class="container"> 
-        <h2 class="pt-5">
-            <a href="index.php" class="text-decoration-none text-dark">
+    <main class="container d-flex flex-column"> 
+        <h2 class="pt-5 mb-5">
+            <a href="index.php" class="text-decoration-none text-dark ">
                 <i class="bi bi-caret-left-fill"></i>
-                Detalhes do Produto
-                <?= $produto['descricao']; ?>
+                Detalhes do Produto - <?= $prod['descricao']; ?>
             </a>
         </h2>
+        <div class="d-flex justify-content-center mb-5">
+                <div class="card box-shadow-sm col-6">
+                    <img src="../images/products/<?= $prod['imagem']?>" 
+                        alt="<?= $prod['descricao']?>" 
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <?= $prod['descricao']?>
+                        </h3>
+
+                        <h6 class="card-text">
+                            <?= $prod['rotulo']?>
+                        </h6>
+
+                        <p class="card-text">
+                            <?= $prod['resumo']?>
+                        </p>
+                        <p class="card-text">
+                            <?="R$ ".number_format($prod['valor'], 2, ',', '.')?>
+                        </p>
+                        <a href="detalhes_produto.php?id=<?= $prod['id'] ?>" class="btn btn-dark">
+                            <span class="d-none d-sm-inline">Adquirir</span> &nbsp;
+                        </a>
+                    </div>
+                </div>
+        </div>
     </main>
 </body>
 </html>

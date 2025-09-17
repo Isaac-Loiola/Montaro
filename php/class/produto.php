@@ -106,22 +106,12 @@ class Produto{
     }
 
     public function obterPorId(int $id) : array{
-        $sql = "select * from produtos where id = :id";
+        $sql = "select * from vw_produtos where id = :id";
         $cmd = $this->pdo->prepare($sql);
         $cmd->bindValue(":id", $id);
         $cmd->execute();
-        if($cmd->rowCount() > 0 ){
-            $dados = $cmd->fetch();
-
-            $this->id = $dados['id'];
-            $this->tipoId = $dados['tipo_id'];
-            $this->descricao = $dados['descricao'];
-            $this->resumo = $dados['resumo'];
-            $this->valor = $dados['valor'];
-            $this->imagem = $dados['imagem'];
-            $this->destaque = $dados['destaque'];
-        }
-
+        $dados = $cmd->fetch();
+        
         return $dados;
     }
 
