@@ -30,9 +30,17 @@
     <!-- header -->
 
     <main class="container"> 
+        <a href="" name="sobre" class="produtos text-decoration-none text-dark"></a>
         <?php include "historia.php"?>
-
-        <?php include "destaques.php"?>
+        
+        <a href="" name="produtos" class="produtos text-decoration-none text-dark">
+            <?php include "destaques.php"?>
+        </a>
     </main>
+    <footer>
+        <a href="" name="contato" class="produtos text-decoration-none text-white">
+            <?php include "rodape.php"?>
+        </a>
+    </footer>
 </body>
 </html>

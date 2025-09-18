@@ -33,7 +33,7 @@
                            </a>
                        </li>
                        <li class="nav-item ">
-                           <a href="#about-us" class="nav-link text-white">
+                           <a href="#sobre" class="nav-link text-white">
                                Sobre nós
                            </a>
                        </li>
@@ -53,7 +53,7 @@
                         </a>
                     </li>
                        <li class="nav-item">
-                           <a href="#products" class="nav-link text-white">
+                           <a href="#produtos" class="nav-link text-white">
                                Produtos
                            </a>
                        </li>
