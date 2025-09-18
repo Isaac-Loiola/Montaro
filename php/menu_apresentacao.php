@@ -62,11 +62,11 @@
                                Tipos 
                            </a>
                            <ul class="dropdown-menu">
-                                <?php foreach ($tipos as $tipo) :?>
+                           <?php foreach ($tipos as $tipo) :?>
                                     <li>
-                                        <a href="#" class="dropdown-item"><?= $tipo['rotulo']?></a>
+                                        <a href="produtos_por_tipo.php?tipo_id=<?= $tipo['id']?>" class="dropdown-item"><?= $tipo['rotulo']?></a>
                                     </li>
-                                <?php endforeach; ?>
+                            <?php endforeach; ?>
                            </ul>
                        </li>
                        <li class="nav-item">
@@ -75,8 +75,8 @@
                            </a>
                        </li>
                        <li class="nav-item">
-                           <form action="" class="d-flex" role="search">
-                               <input type="text" class="form-control me-2" placeholder="Buscar produto" aria-label="Search" required>
+                       <form action="produto_busca.php" method="get" class="d-flex" role="search">
+                               <input type="text" class="form-control me-2" placeholder="Buscar produto" aria-label="Search" name="buscar" required>
                                <button class="btn btn-outline-light">
                                    <i class="bi bi-search"></i>
                                </button>

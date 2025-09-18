@@ -31,11 +31,14 @@
 
     <main class="container"> 
         <?php 
-        include_once "class/produto.php";
-
+        if(isset($_GET['tipo_id'])){
+            $tipoId = $_GET['tipo_id'];
+            include_once "class/produto.php";
+    
             $produto = new Produto();
-            $produtos = $produto->listar(); // Retorna apenas os produtos em destaque / vazio - retorna todos
+            $produtos = $produto->obterPorId($tipoId); // Retorna apenas os produtos em destaque / vazio - retorna todos
             $linhas = count($produtos);
+        }
         ?>
 
         <section>
