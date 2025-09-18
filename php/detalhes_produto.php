@@ -37,7 +37,7 @@
     <main class="container d-flex flex-column"> 
         <h2 class="pt-5 mb-5">
             <a href="index.php" class="text-decoration-none text-dark ">
-                <i class="bi bi-caret-left-fill"></i>
+                <i class="bi bi-caret-left-fill mb-5"></i>
                 Detalhes do Produto - <?= $prod['descricao']; ?>
             </a>
         </h2>
@@ -55,15 +55,15 @@
                             <?= $prod['rotulo']?>
                         </h6>
 
-                        <p class="card-text">
+                        <p class="card-text mb-3">
                             <?= $prod['resumo']?>
                         </p>
-                        <p class="card-text">
+                        <div class="d-flex gap-3">
                             <?="R$ ".number_format($prod['valor'], 2, ',', '.')?>
-                        </p>
-                        <a href="detalhes_produto.php?id=<?= $prod['id'] ?>" class="btn btn-dark">
-                            <span class="d-none d-sm-inline">Adquirir</span> &nbsp;
-                        </a>
+                            <a href="detalhes_produto.php?id=<?= $prod['id'] ?>" class="btn btn-dark">
+                                <span class="d-none d-sm-inline">Adquirir</span> &nbsp;
+                            </a>
+                        </div>
                     </div>
                 </div>
         </div>
