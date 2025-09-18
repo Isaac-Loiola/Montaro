@@ -15,7 +15,7 @@
                <a href="index.php" class="navbar-brand">
                    <img src="../images/logo/montaro-logo-white.png" alt>
                </a>
-               <button class="navbar-toggle!r" 
+               <button class="navbar-toggler" 
                type="button" 
                data-bs-target="#menuPublico" 
                data-bs-toggle="collapse" 
