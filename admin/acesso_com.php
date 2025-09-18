@@ -10,7 +10,7 @@
 
 
 // 3 - Verifica se o nome da sessão corresponde a sessão atual 
-
+        
 
 
 // 4 - Segurança Extra: valida o agente (usuário) e o IP

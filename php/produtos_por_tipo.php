@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Montaro</title>
 
-    <!--  icons -->
+    <!-- icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     
     <!--  boostrap 5.3 local -->
@@ -36,7 +36,7 @@
             include_once "class/produto.php";
     
             $produto = new Produto();
-            $produtos = $produto->obterPorId($tipoId); // Retorna apenas os produtos em destaque / vazio - retorna todos
+            $produtos = $produto->obterPorTipoId($tipoId); // Retorna apenas os produtos em destaque / vazio - retorna todos
             $linhas = count($produtos);
         }
         ?>
