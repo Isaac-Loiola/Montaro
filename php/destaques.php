@@ -16,7 +16,7 @@ include "class/produto.php";
 
 <?php if($linhas > 0) {?>
 
-        <h2 class="pt-5" id="#destaques">
+        <h2 class="pt-5 mb-5" id="#destaques">
             Produtos em Destaque
         </h2>
         

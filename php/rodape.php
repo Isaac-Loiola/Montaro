@@ -1,4 +1,4 @@
-<footer class="rounded-top container-fluid py-5" id="contato" >
+<footer class="rounded-top container-fluid py-5 mt-5" id="contato" >
         <div class="container d-flex flex-wrap">
             <div class="col-md-4 mb-4 text-white">
                 <img src="images/logo/montaro-logo-white.png" alt="" class="mb-2">

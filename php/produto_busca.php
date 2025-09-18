@@ -45,14 +45,14 @@
         <section>
 
         <?php  if($linhas == 0 ){ ?>
-                <h2 class="pt-5" id="products">
+                <h2 class="pt-5 mb-5" id="products">
                     Não Há <?= $busca?> Na Lista de Produtos
                 </h2>
         <?php }?>
 
         <?php if($linhas > 0) {?>
 
-                <h2 class="pt-5" id="#destaques">
+                <h2 class="pt-5 mb-5" id="#destaques">
                     Produtos em 
                 </h2>
                 
