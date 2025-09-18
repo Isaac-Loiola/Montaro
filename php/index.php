@@ -33,8 +33,12 @@
         <a href="" name="sobre" class="produtos text-decoration-none text-dark"></a>
         <?php include "historia.php"?>
         
-        <a href="" name="produtos" class="produtos text-decoration-none text-dark">
+        <a href="" name="destaque" class="produtos text-decoration-none text-dark">
             <?php include "destaques.php"?>
+        </a>
+
+        <a href="" name="produtos" class="produtos text-decoration-none text-dark">
+            <?php include "produtos_geral.php"?>
         </a>
     </main>
     <footer>
