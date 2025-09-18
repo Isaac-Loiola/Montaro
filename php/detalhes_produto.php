@@ -47,11 +47,11 @@
                         alt="<?= $prod['descricao']?>" 
                         class="card-img-top">
                     <div class="card-body">
-                        <h3 class="card-title">
+                        <h3 class="card-title text-center">
                             <?= $prod['descricao']?>
                         </h3>
 
-                        <h6 class="card-text">
+                        <h6 class="card-text text-center">
                             <?= $prod['rotulo']?>
                         </h6>
 
