@@ -12,10 +12,10 @@
     <div class="">
         <nav class="navbar navbar-expand-xl fixed-top ">
            <div class="container-fluid">
-               <a href="index.html" class="navbar-brand">
+               <a href="index.php" class="navbar-brand">
                    <img src="../images/logo/montaro-logo-white.png" alt>
                </a>
-               <button class="navbar-toggler" 
+               <button class="navbar-toggle!r" 
                type="button" 
                data-bs-target="#menuPublico" 
                data-bs-toggle="collapse" 
