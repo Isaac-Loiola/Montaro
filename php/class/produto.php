@@ -127,11 +127,9 @@ class Produto{
 
     // buscar produtos por texto na desecrição ou no resumo
     public function obterPorString(string $busca) : array{
-        $sql = "select * from vw_produtos where descricao like '%:busca%' or resumo like '%:busca%'
+        $sql = "select * from vw_produtos where descricao like '% $busca%' or resumo like '% $busca%'
         order by descricao asc";
-        
         $cmd = $this->pdo->prepare($sql);
-        $cmd->bindValue(":busca", $busca);
         $cmd->execute();
         $dados = $cmd->fetchAll();
         

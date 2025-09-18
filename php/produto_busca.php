@@ -46,14 +46,14 @@
 
         <?php  if($linhas == 0 ){ ?>
                 <h2 class="pt-5" id="products">
-                    Não Há Produtos Cadastrados
+                    Não Há <?= $busca?> Na Lista de Produtos
                 </h2>
         <?php }?>
 
         <?php if($linhas > 0) {?>
 
                 <h2 class="pt-5" id="#destaques">
-                    Produtos em Destaque
+                    Produtos em 
                 </h2>
                 
                 <div class="d-flex flex-wrap gap-lg-5 gap-sm-3 gap-md justify-content-center">
