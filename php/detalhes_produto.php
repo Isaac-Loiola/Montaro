@@ -68,5 +68,10 @@
                 </div>
         </div>
     </main>
+    <footer>
+        <a href="" name="contato" class="produtos text-decoration-none text-white">
+            <?php include "rodape.php"?>
+        </a>
+    </footer>
 </body>
 </html>

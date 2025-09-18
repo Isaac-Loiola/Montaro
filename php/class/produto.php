@@ -115,6 +115,16 @@ class Produto{
         return $dados;
     }
 
+    public function obterPorTipoId(int $id) : array{
+        $sql = "select * from vw_produtos where tipo_id = :id";
+        $cmd = $this->pdo->prepare($sql);
+        $cmd->bindValue(":id", $id);
+        $cmd->execute();
+        $dados = $cmd->fetchAll();
+        
+        return $dados;
+    }
+
 
     public function atualizar(int $idUpdate){
         $id = $idUpdate;
