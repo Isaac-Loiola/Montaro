@@ -15,7 +15,9 @@ if(!isset($_SESSION['login_usuario'])){
     header('location:login.php');
     exit;
 }
-
+else{
+    exit;
+}
 // $_SESSION['nome_da_sessao'] = "troquei_memu";
 
 
