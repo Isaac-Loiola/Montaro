@@ -94,9 +94,9 @@ class Usuario{
         $cmd = $this->pdo->prepare($sql);
         $cmd->bindValue(":login", $loginInformado);
         $cmd->bindValue(":senha", $senhaInformada);
-        $cmd->execute();
+        $cmd->execute();    
 
-        $dados = $cmd->fetch();
+        $dados = $cmd->fetch(PDO::FETCH_ASSOC);
         return $dados;       
         
     }
@@ -105,7 +105,7 @@ class Usuario{
         $id = $idUpdate;
         if(!$this->id) return false;
 
-        $sql = "update usuarios set login = :login, nivel = :nivel where id = :id";
+        $sql = "update usuarios set login = :login, nivel = :nivel where id = :id"; 
         $cmd = $this->pdo->prepare($sql);
         $cmd->bindValue(":login", $this->login);
         $cmd->bindValue(":nivel", $this->nivel);

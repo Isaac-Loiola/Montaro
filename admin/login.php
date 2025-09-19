@@ -4,9 +4,9 @@ if($_POST){
         $login = $_POST['login'];
         $senha = $_POST['senha'];
         $user = new Usuario();
-        $user->efetuarLogin($login, $senha);
 
         $usuarioLogado = $user->efetuarLogin($login, $senha);
+
         if(count($usuarioLogado) > 0){
                 if(!isset($_SESSION)){
                         session_name('montaro');
