@@ -83,7 +83,7 @@
                            </form>
                        </li>
                        <li class="nav-item"> 
-                           <a href="#" class="nav-link text-white">
+                           <a href="../admin/index.php" class="nav-link text-white">
                                <i class="bi bi-person-fill"></i> &nbsp; admin/cliente
                            </a>
                        </li>
