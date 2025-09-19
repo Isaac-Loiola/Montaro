@@ -4,6 +4,8 @@
 session_name('montaro');
 session_start();
 
+$_SESSION['login_usuario'] = 'isaac';
+$_SESSION['nome_da_sessao'] = "montaro";
 
 
 // 2 - Segurança: verificar se a sessão é valida
@@ -14,7 +16,7 @@ if(!isset($_SESSION['login_usuario'])){
     exit;
 }
 
-$_SESSION['nome_da_sessao'] = "troquei_memu";
+// $_SESSION['nome_da_sessao'] = "troquei_memu";
 
 
 
@@ -31,10 +33,21 @@ if(!isset($_SESSION['nome_da_sessao'])){
 }
 
 // 4 - Segurança Extra: valida o agente (usuário) e o IP
-
-
+if(!isset($_SESSION['ip_usuario'])){
+    $_SESSION['ip_usuario'] = $_SERVER['REMOTE_ADDR'];
+}
+if(!isset($_SESSION['user_agent'])){
+    $_SESSION['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
+}
 // 5 - Se IP ou navegador mudaram, invalida a sessão!
+if($_SESSION['ip_usuario'] !== $_SERVER['REMOTE_ADDR'] ||
+$_SERVER['user_agent'] !== $_SERVER['HTTP_USER_AGENT']){
+    session_destroy();
+    header('location: login.php');
+    exit;
+}
 
 
+print_r($_SESSION);
 
 ?>

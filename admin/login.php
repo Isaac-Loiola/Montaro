@@ -46,9 +46,9 @@
         <i class="bi bi-person-fill text-info"></i>
         </span>
         <input type="text" name="login" id="login" 
-                                    class="form-control" 
-                                    placeholder="Digite seu login" 
-                                    autofocus required autocomplete="off">
+                class="form-control" 
+                placeholder="Digite seu login" 
+                autofocus required autocomplete="off">
         </div>
         </div>
         
@@ -60,9 +60,9 @@
         <i class="bi bi-lock-fill text-info"></i>
         </span>
         <input type="password" name="senha" id="senha" 
-                                    class="form-control" 
-                                    placeholder="Digite sua senha" 
-                                    required autocomplete="off">
+                class="form-control" 
+                placeholder="Digite sua senha" 
+                required autocomplete="off">
         </div>
         </div>
         
