@@ -19,6 +19,9 @@ if($_POST){
         if($usuarioLogado['nivel'] == "adm"){
                 echo "<script>window.open('index.php', '_self')</script>";
         }
+        elseif($usuarioLogado['nivel'] == "cli"){
+                echo "<script>window.open('../cliente/index.php', '_self')</script>";
+        }
 }
 ?>
 
@@ -29,7 +32,7 @@ if($_POST){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta http-equiv="refresh" content="5;url=../php/index.php">
+    <meta http-equiv="refresh" content="30;url=../php/index.php">
     <title>Montaro</title>
 
     <!--  icons -->
