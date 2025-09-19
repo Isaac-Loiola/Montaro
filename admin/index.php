@@ -25,7 +25,9 @@ include "acesso_com.php";
 <body>
     <?php 
         include 'menu_adm.php';
-        include 'adm_options.php'
-    ?>
+        include 'adm_options.php';
+        ?>
+
+        <h1>Testando som!</h1>
 </body>
 </html>

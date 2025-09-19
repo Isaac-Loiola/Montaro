@@ -4,8 +4,8 @@
 session_name('montaro');
 session_start();
 
-$_SESSION['nome_da_sessao'] = "montaro";
-$_SESSION['login_usuario'] = 'isaac';
+// $_SESSION['nome_da_sessao'] = "montaro";
+// $_SESSION['login_usuario'] = 'isaac';
 
 
 // 2 - Segurança: verificar se a sessão é valida
@@ -15,9 +15,7 @@ if(!isset($_SESSION['login_usuario'])){
     header('location:login.php');
     exit;
 }
-else{
-    exit;
-}
+
 // $_SESSION['nome_da_sessao'] = "troquei_memu";
 
 

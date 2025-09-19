@@ -96,7 +96,7 @@ class Usuario{
         $cmd->bindValue(":senha", $senhaInformada);
         $cmd->execute();
 
-        $dados = $cmd->fetch(PDO::FETCH_ASSOC);
+        $dados = $cmd->fetch();
         return $dados;       
         
     }
