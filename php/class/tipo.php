@@ -24,10 +24,21 @@ class Tipo{
         ]);
     }
 
+    function obterPorId(int $id) : array{
+        $sql = "select * from tipos where id = :id";
+        $cmd = $this->pdo->prepare($sql);
+        $cmd->execute([
+            ':id' => $id
+        ]);
+        return $cmd->fetch();
+    }
+
     function obterLista() : array{  
         $sql = "select * from tipos";
         $cmd = $this->pdo->query($sql);
         return $cmd->fetchAll();
     }
+
+    
 }
 ?>
