@@ -23,5 +23,11 @@ class Tipo{
             ':rotulo' => $rotulo
         ]);
     }
+
+    function obterLista() : array{  
+        $sql = "select * from tipos";
+        $cmd = $this->pdo->query($sql);
+        return $cmd->fetchAll();
+    }
 }
 ?>
