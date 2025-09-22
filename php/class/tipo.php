@@ -39,6 +39,13 @@ class Tipo{
         return $cmd->fetchAll();
     }
 
-    
+    function atualizar(string $sigla, string $rotulo) : bool{
+        $sql = "update tipos set sigla = :sigla, rotulo = :rotulo";
+        $cmd = $this->pdo->prepare($sql);
+        return $cmd->execute([
+            ':sigla' => $sigla,
+            ':rotulo' => $rotulo
+        ]);
+    }
 }
 ?>
