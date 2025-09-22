@@ -17,6 +17,9 @@ include_once "../php/class/produto.php";
     <link rel="stylesheet" href="../css/estilo.css">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- JS Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 </head>
 <body>
     <?php include 'menu_adm.php'; ?>
@@ -113,10 +116,21 @@ include_once "../php/class/produto.php";
             </div>
         </div>
     </div>
- 
-    <!-- JS Bootstrap 5 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
- 
+                                
+    <script>
+        document.querySelectorAll('.delete').forEach(btn => {
+            btn.addEventListener('click', function (){
+                let nome  = this.getAttribute('data-nome');
+                let id = this.getAttribute('data-id');
+
+                document.querySelector('span.nome').textContent = nome;
+                document.querySelector('a.delete-yes').setAttribute('href', 'produtos_excluir.php?id='+ id);
+                let modal = new bootstrap.Modal(document.getElementById('modalEdit'));
+                modal.show();
+            })
+        });
+
+    </script>
 </body>
 </html>
  
