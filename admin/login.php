@@ -13,6 +13,7 @@ if($_POST){
                         session_start();
                 }
         }
+
         $_SESSION['login_usuario'] = $usuarioLogado['login'];
         $_SESSION['nivel_usuario'] = $usuarioLogado['nivel'];
         $_SESSION['nome_da_sessao'] = session_name();

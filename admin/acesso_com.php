@@ -18,8 +18,6 @@ if(!isset($_SESSION['login_usuario'])){
 
 // $_SESSION['nome_da_sessao'] = "troquei_memu";
 
-
-
 // 3 - Verifica se o nome da sessão corresponde a sessão atual 
 
 if(!isset($_SESSION['nome_da_sessao'])){
@@ -27,7 +25,7 @@ if(!isset($_SESSION['nome_da_sessao'])){
     $_SESSION['nome_da_sessao'] = session_name();
 
 }else if($_SESSION['nome_da_sessao'] !== session_name()){
-    session_destroy();-
+    session_destroy();
     header('location:login.php');
     exit;
 }
@@ -37,7 +35,7 @@ if(!isset($_SESSION['ip_usuario'])){
     $_SESSION['ip_usuario'] = $_SERVER['REMOTE_ADDR'];
 }
 if(!isset($_SESSION['user_agent'])){
-    $_SESSION['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
+    $_SERVER['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
 }
 // 5 - Se IP ou navegador mudaram, invalida a sessão!
 if($_SESSION['ip_usuario'] !== $_SERVER['REMOTE_ADDR'] ||
@@ -48,6 +46,6 @@ $_SERVER['user_agent'] !== $_SERVER['HTTP_USER_AGENT']){
 }
 
 
-print_r($_SESSION);
+// print_r($_SESSION);
 
 ?>

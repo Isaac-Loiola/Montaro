@@ -1,6 +1,11 @@
 <?php
 include 'acesso_com.php';
- 
+include_once "../php/class/produto.php";
+
+
+    $produto = new Produto();
+    $produtos = $produto->listar();
+    $linhas = count($produtos);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -36,16 +41,18 @@ include 'acesso_com.php';
             </thead>
            
             <tbody>
-           
+                <?php foreach($produtos as $prod) : ?>
                     <tr>
                         <td class="d-none">
-                           
+                           <?= $prod['id'] ?>
                         </td>
                         <td>
-                           
+                            <?= $prod['rotulo'] ?>
                         </td>
                         <td>
-                           
+                           <?php 
+                            
+                           ?>
                         </td>
                         <td>
                            
@@ -75,7 +82,7 @@ include 'acesso_com.php';
                             </button>
                         </td>
                     </tr>    
-               
+                <?php endforeach?>
             </tbody>
         </table>
     </main>
