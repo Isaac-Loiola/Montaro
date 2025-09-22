@@ -1,6 +1,11 @@
 <?php 
 include 'acesso_com.php';
 include_once '../php/class/produto.php';
+include_once '../php/class/tipo.php';
+
+
+$tipo = new Tipo();
+$tipos = $tipo->obterLista();
 
 if($_POST){
     if(isset($_POST['enviar'])){
@@ -66,9 +71,12 @@ if($_POST){
 <div class="input-group">
 <span class="input-group-text"><i class="bi bi-list-task"></i></span>
 <select name="id_tipo" id="id_tipo" class="form-select" required>
-    <option value="1">Churrasco</option>
-    <option value="5">Bebida</option>
-    <option value="2">Sobremesa</option>
+    <?php foreach($tipos as $tip) : ?>
+       <option value="<?= $tip['id']?>"><?= $tip['rotulo'] ?></option>
+    <?php endforeach;?>
+        <!-- <option value="1">Churrasco</option>
+        <option value="5">Bebida</option>
+    <option value="2">Sobremesa</option> -->
 </select>
 </div>
 </div>
