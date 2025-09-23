@@ -23,11 +23,11 @@ include "acesso_com.php";
     <script src="../js/bootstrap.bundle.min.js" defer></script>
 </head>
 <body>
+    
     <?php 
         include 'menu_adm.php';
         include 'adm_options.php';
-        ?>
+    ?>
 
-        <h1>Testando som!</h1>
 </body>
 </html>

@@ -15,7 +15,7 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <span class="btn btn-danger disabled me-2" style="cursor: default;">
-            Olá, <?=($_SESSION['login_usuario'])?>!
+            Olá, <?php  echo $_SESSION['login_usuario'] ?>!
           </span>
         </li>
         <li class="nav-item active">
