@@ -162,8 +162,8 @@ class Produto{
         return $cmd->execute();
     }
 
-    public function excluir(int $idDelete){
-        $id = $idDelete;
+    public function excluir(int $idDelete) :bool{
+        $this->id = $idDelete;
         if(!$this->id) return false;
 
         $sql = "delete from produtos where id = :id";
