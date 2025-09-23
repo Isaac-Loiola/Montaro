@@ -3,6 +3,7 @@
 include_once "db.php";
 
 class Nivel{
+
     private $id;
     private $sigla;
     private $nome;
@@ -21,6 +22,16 @@ class Nivel{
             ':sigla' => $sigla,
             ':nome' => $nome
         ]);
+    }
+
+    function obterPorId(string $idNivel): array{
+        $sql = "select * from niveis where id = :id";
+        $cmd = $this->pdo->prepare($sql);
+        $cmd->execute([
+            ':id' => $idNivel
+        ]);
+
+        return $cmd->fetch();
     }
 }
 
