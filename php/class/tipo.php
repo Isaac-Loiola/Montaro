@@ -4,8 +4,8 @@ include_once "db.php";
 class Tipo{
     // Atributos!
     private $id;
-    private $sigla;
-    private $rotulo;
+    public $sigla;
+    public $rotulo;
 
     private $pdo;
 
@@ -15,12 +15,12 @@ class Tipo{
     }
 
     // Função para inserir um tipo ao banco de dados.
-    function inserir(string $sigla, string $rotulo) : bool {
+    function inserir() : bool {
         $sql = "insert into tipos (sigla, rotulo) values (:sigla, :rotulo)";
         $cmd = $this->pdo->prepare($sql);
         return $cmd->execute([
-            ':sigla' => $sigla,
-            ':rotulo' => $rotulo
+            ':sigla' => $this->sigla,
+            ':rotulo' => $this->rotulo
         ]);
     }
 
