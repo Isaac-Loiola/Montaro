@@ -1,46 +1,46 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <!-- Logo -->
-    <a class="navbar-brand" href="index.php">
-      <img src="../images/logo-chuleta.png" alt="Logo" height="30">
-    </a>
- 
-    <!-- Botão toggle para mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#defaultNavbar" aria-controls="defaultNavbar" aria-expanded="false" aria-label="Alternar navegação">
-      <span class="navbar-toggler-icon"></span>
-    </button>
- 
-    <!-- Menu -->
-    <div class="collapse navbar-collapse" id="defaultNavbar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <span class="btn btn-danger disabled me-2" style="cursor: default;">
-            Olá, <?php  echo $_SESSION['login_usuario'] ?>!
-          </span>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="index.php">ADMIN</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="produtos_lista.php">PRODUTOS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="tipos_lista.php">TIPOS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="usuarios_lista.php">USUÁRIOS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../index.php">
-            <i class="bi bi-house"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="logout.php">
-            <i class="bi bi-box-arrow-right"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<nav class="navbar navbar-expand-xl fixed-top ">
+           <div class="container-fluid">
+               <a href="../php/index.php" class="navbar-brand">
+                   <img src="../images/logo/montaro-logo-white.png" alt>
+               </a>
+               <button class="navbar-toggler" 
+               type="button" 
+               data-bs-target="#menuPublico" 
+               data-bs-toggle="collapse" 
+               aria-controls="menuPublico"
+               aria-expanded="false"
+               aria-label="Toggle navigation"
+               >
+                   <span class="bi bi-three-dots"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="menuPublico">
+                   <ul class="navbar-nav ms-auto mb-2 mb-md-0 gap-2" >
+                       <li class="nav-item">
+                           <a href="index.html" class="nav-link active" aria-current="page">
+                               <i class="bi bi-house-door-fill text-white"></i>
+                           </a>
+                       </li>
+                        <li class="nav-item ">
+                            <a href="produtos_lista.php" class="nav-link text-white">
+                                Produtos
+                            </a>
+                        </li>
+                          <li class="nav-item">
+                              <a href="tipos_lista.php" class="nav-link text-white">
+                                  Tipos
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="usuarios_lista.php" class="nav-link text-white">
+                                  Usuarios
+                              </a>
+                          </li>
+                          <li class="nav-item"> 
+                              <a href="logout.php" class="nav-link text-white">
+                                  <i class="bi bi-arrow-right"></i>
+                              </a>
+                          </li>
+                   </ul>
+               </div>
+           </div>
+        </nav>
