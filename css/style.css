@@ -102,3 +102,8 @@ footer{
 .btn-destaque{
     cursor: default;
 }
+
+.icon-adm{
+    font-size: 40px;
+    color: #fff;
+}

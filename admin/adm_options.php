@@ -1,16 +1,15 @@
-<main class="container my-4">
-  <h1 class="mb-4">Área Administrativa</h1>
+    <main class="container my-4">
+  <h1 class="mb-5">Área Administrativa</h1>
   <div class="row g-4"><!-- g-4 = espaçamento entre colunas -->
- 
     <!-- ADM PRODUTOS -->
     <div class="col-sm-6 col-md-4">
       <div class="card border-danger h-100 text-center">
         <div class="card-body">
-          <img src="../images/icone_produtos.png" alt="Produtos" class="mb-3" style="max-height:80px;">
-          <h5 class="card-title text-danger">PRODUTOS</h5>
+          <i class="icon-adm bi bi-box-seam-fill"></i>
+          <h5 class="card-title text-dark">PRODUTOS</h5>
           <div class="d-grid gap-2">
-            <a href="produtos_lista.php" class="btn btn-danger">LISTAR</a>
-            <a href="produtos_insere.php" class="btn btn-danger">INSERIR</a>
+            <a href="produtos_lista.php" class="btn btn-dark">LISTAR</a>
+            <a href="produtos_insere.php" class="btn btn-dark">INSERIR</a>
           </div>
         </div>
       </div>
@@ -21,11 +20,11 @@
     <div class="col-sm-6 col-md-4">
       <div class="card border-warning h-100 text-center">
         <div class="card-body">
-          <img src="../images/icone_tipos.png" alt="Tipos" class="mb-3" style="max-height:80px;">
-          <h5 class="card-title text-warning">TIPOS</h5>
+          <i class="bi bi-view-list"></i>
+          <h5 class="card-title text-dark">TIPOS</h5>
           <div class="d-grid gap-2">
-            <a href="tipos_lista.php" class="btn btn-warning">LISTAR</a>
-            <a href="tipos_insere.php" class="btn btn-warning">INSERIR</a>
+            <a href="tipos_lista.php" class="btn btn-dark">LISTAR</a>
+            <a href="tipos_insere.php" class="btn btn-dark">INSERIR</a>
           </div>
         </div>
       </div>
@@ -36,11 +35,11 @@
     <div class="col-sm-6 col-md-4">
       <div class="card border-info h-100 text-center">
         <div class="card-body">
-          <img src="../images/icone_user.png" alt="Usuários" class="mb-3" style="max-height:80px;">
-          <h5 class="card-title text-info">USUÁRIOS</h5>
+          <i class="bi bi-person-fill"></i>
+          <h5 class="card-title text-dark">USUÁRIOS</h5>
           <div class="d-grid gap-2">
-            <a href="usuarios_lista.php" class="btn btn-info">LISTAR</a>
-            <a href="usuarios_insere.php" class="btn btn-info">INSERIR</a>
+            <a href="usuarios_lista.php" class="btn btn-dark">LISTAR</a>
+            <a href="usuarios_insere.php" class="btn btn-dark">INSERIR</a>
           </div>
         </div>
       </div>
