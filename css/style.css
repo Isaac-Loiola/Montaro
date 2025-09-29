@@ -104,6 +104,10 @@ footer{
 }
 
 .icon-adm{
-    font-size: 40px;
-    color: #fff;
+    font-size: 80px;
+    color: #000;
+}
+
+.table{
+    border-radius: 20px;
 }

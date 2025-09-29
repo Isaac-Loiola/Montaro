@@ -20,7 +20,7 @@
     <div class="col-sm-6 col-md-4">
       <div class="card border-warning h-100 text-center">
         <div class="card-body">
-          <i class="bi bi-view-list"></i>
+          <i class="icon-adm bi bi-view-list"></i>
           <h5 class="card-title text-dark">TIPOS</h5>
           <div class="d-grid gap-2">
             <a href="tipos_lista.php" class="btn btn-dark">LISTAR</a>
@@ -35,7 +35,7 @@
     <div class="col-sm-6 col-md-4">
       <div class="card border-info h-100 text-center">
         <div class="card-body">
-          <i class="bi bi-person-fill"></i>
+          <i class="icon-adm bi bi-person-fill"></i>
           <h5 class="card-title text-dark">USUÁRIOS</h5>
           <div class="d-grid gap-2">
             <a href="usuarios_lista.php" class="btn btn-dark">LISTAR</a>

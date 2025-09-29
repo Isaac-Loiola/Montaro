@@ -20,14 +20,17 @@ include_once "../php/class/produto.php";
 
     <!-- JS Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <?php include 'menu_adm.php'; ?>
     <main class="container my-4">
-        <h2 class="alert alert-danger">Lista de Produtos</h2>
+        <h1 class="">Lista de Produtos</h1>
         <table class="table table-hover table-sm table-striped table-warning align-middle">
             <thead class="table-dark">
-                <tr>
+                <tr class="p-5">
                     <th class="d-none">ID</th>
                     <th>TIPO</th>
                     <th>DESCRIÇÃO</th>
