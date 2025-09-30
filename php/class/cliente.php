@@ -27,6 +27,14 @@ class Cliente{
         return $cmd->execute();
     }
 
+    function efetuarLogin($login, $senha) : bool{
+        $sql = "select cpf, email, senha from clientes where senha = :senha and cpf = :cpf or email = :email";
+        $cmd = $this->pdo->prepare($sql);
+        $cmd->bindValue(":senha", $senha);
+        $cmd->bindValue(":cpf", $login);
+        $cmd->bindValue(":email", $login);
+        return $cmd->execute();
+    }
 }
 
 ?>
