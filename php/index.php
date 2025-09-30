@@ -30,6 +30,8 @@
     <!-- header -->
 
     <main class="container"> 
+        <?php include "banner-reserva.php"?>
+        
         <a href="" name="sobre" class="produtos text-decoration-none text-dark"></a>
         <?php include "historia.php"?>
         
