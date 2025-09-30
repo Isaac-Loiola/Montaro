@@ -93,6 +93,7 @@ if($_POST){
                 placeholder="Digite sua senha" 
                 required autocomplete="off">
         </div>
+        <a href="../php/cadastroUsuario.php" class="text-decoration-none">Cadastre-se</a>
         </div>
         
                         <!-- Botão -->
