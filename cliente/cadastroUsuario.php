@@ -1,3 +1,20 @@
+<?php 
+include_once "../php/class/cliente.php";
+    
+    if($_POST){
+        $cliente = new Cliente();
+        $cliente->nome = $_POST['nome'];
+        $cliente->cpf = $_POST['cpf'];
+        $cliente->email = $_POST['email'];
+        $cliente->telefone = $_POST['telefone'];
+        $cliente->senha = $_POST['senha'];
+
+        if($cliente->inserir()){
+            header("location:index.php");
+        }
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +37,7 @@
 </head>
 <body>
     <header class="mb-5">
-        <?php include "menu_publico.php"?>
+        <?php include "../php/menu_publico.php"?>
     </header>
     <main class="container py-5 d-flex justify-content-center align-items-center">
         <div class="card-login shadow-lg col-10 col-lg-4 mt-5 p-5">
@@ -28,19 +45,19 @@
             <p>Realize o seu cadastro para ter um visão geral</p>
                 <form action="cadastroUsuario.php" method="post" class="inputs d-flex flex-column gap-5">
                     <div class="input-group">
-                        <input type="text" name="nome" id="nome" placeholder="Nome" maxlength="50" class="input-text">
+                        <input type="text" name="nome" id="nome" placeholder="Nome" maxlength="50" class="input-text" required>
                     </div>
                     <div class="input-group">
-                        <input type="text" name="cpf" id="cpf" placeholder="CPF" maxlength="11" class="input-text">
+                        <input type="text" name="cpf" id="cpf" placeholder="CPF" maxlength="11" class="input-text" required>
                     </div>
                     <div class="input-group">
-                        <input type="mail" name="email" id="email" placeholder="Email"  maxlength="90" class="input-text">
+                        <input type="mail" name="email" id="email" placeholder="Email"  maxlength="90" class="input-text" required>
                     </div>
                     <div class="input-group">
-                        <input type="text" name="telefone" id="telefone" placeholder="Telefone" maxlength="11" class="input-text">
+                        <input type="text" name="telefone" id="telefone" placeholder="Telefone" maxlength="11" class="input-text" required>
                     </div>
                     <div class="input-group">
-                        <input type="text" name="senha" id="senha" placeholder="Senha" class="input-text">
+                        <input type="text" name="senha" id="senha" placeholder="Senha" class="input-text" required>
                     </div>
                     <div class="input-group">
                         <button type="submit" name="cadastro" id="cadastro" class="btn btn-dark">
