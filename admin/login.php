@@ -1,4 +1,5 @@
 <?php 
+require_once "acesso_com.php";
 require_once "../php/class/usuario.php";
 if($_POST){
         $login = $_POST['login'];
