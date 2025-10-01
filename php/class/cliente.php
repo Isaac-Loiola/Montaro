@@ -1,5 +1,5 @@
 <?php 
-include "db.php";
+include_once "db.php";
 
 class Cliente{
     public $id;
@@ -27,13 +27,18 @@ class Cliente{
         return $cmd->execute();
     }
 
-    function efetuarLogin($login, $senha) : bool{
+    function efetuarLogin($login, $senha) : array{
         $sql = "select cpf, email, senha from clientes where senha = :senha and cpf = :cpf or email = :email";
         $cmd = $this->pdo->prepare($sql);
         $cmd->bindValue(":senha", $senha);
         $cmd->bindValue(":cpf", $login);
         $cmd->bindValue(":email", $login);
-        return $cmd->execute();
+        $cmd->execute();
+        $dados = $cmd->fetch(PDO::FETCH_ASSOC);
+        if($dados == false){
+            return $dados = [];
+        }
+        return $dados;
     }
 }
 

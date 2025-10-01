@@ -1,28 +1,47 @@
 <?php 
-require_once "acesso_com.php";
-require_once "../php/class/usuario.php";
+// require_once "acesso_com.php";
+include_once "../php/class/usuario.php";
+include_once "../php/class/cliente.php";
+
 if($_POST){
         $login = $_POST['login'];
         $senha = $_POST['senha'];
         $user = new Usuario();
 
         $usuarioLogado = $user->efetuarLogin($login, $senha);
+        
+        if(count($usuarioLogado)  == 0){
+                $cli = new Cliente();
+                $cliente = $cli->efetuarLogin($login, $senha);
+                if(count($cliente) == 0){
 
-        if(count($usuarioLogado) > 0){
-                if(!isset($_SESSION)){
-                        session_name('montaro');
-                        session_start();
                 }
+                else{
+                        if(!isset($_SESSION)){
+                                session_name('montaro');
+                                session_start();
+                        }
+                        $_SESSION['login_usuario'] = $login;
+                        $_SESSION['nome_da_sessao'] = session_name();
+                                header("location: ../cliente/index.php");
+                }
+                
+                                
         }
-
-        $_SESSION['login_usuario'] = $usuarioLogado['login'];
-        $_SESSION['nivel_usuario'] = $usuarioLogado['nivel'];
-        $_SESSION['nome_da_sessao'] = session_name();
-        if($usuarioLogado['nivel'] == "adm"){
-                echo "<script>window.open('index.php', '_self')</script>";
-        }
-        elseif($usuarioLogado['nivel'] == "cli"){
-                echo "<script>window.open('../cliente/index.php', '_self')</script>";
+        else{
+                if(count($usuarioLogado) > 0){
+                        if(!isset($_SESSION)){
+                                session_name('montaro');
+                                session_start();
+                        }
+                }
+        
+                $_SESSION['login_usuario'] = $usuarioLogado['login'];
+                $_SESSION['nivel_usuario'] = $usuarioLogado['nivel'];
+                $_SESSION['nome_da_sessao'] = session_name();
+                if($usuarioLogado['nivel'] == "adm"){
+                        echo "<script>window.open('index.php', '_self')</script>";
+                }
         }
 }
 ?>
@@ -70,7 +89,7 @@ if($_POST){
         <form action="login.php" name="form_login" id="form_login" method="POST" enctype="multipart/form-data">
         <!-- Login -->
         <div class="mb-3">
-        <label for="login" class="form-label">Login:</label>
+        <label for="login" class="form'-label">Login:</label>
         <div class="input-group">
         <span class="input-group-text">
         <i class="bi bi-person-fill text-info"></i>

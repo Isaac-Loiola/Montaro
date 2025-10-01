@@ -4,8 +4,6 @@
 session_name('montaro');
 session_start();
 
-// $_SESSION['nome_da_sessao'] = "montaro";
-// $_SESSION['login_usuario'] = "isaac";
 
 
 // 2 - Segurança: verificar se a sessão é valida

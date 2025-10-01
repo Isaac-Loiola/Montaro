@@ -1,3 +1,8 @@
+<?php 
+if(isset($_SESSION)){
+    header("location: index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -41,8 +46,8 @@
                 Ao seguir essas orientações, você garante que sua reserva será processada corretamente e que poderá aproveitar todos os benefícios da promoção.
             </p>
 
-            <a href="cadastro.php" class="btn btn-dark col-2">
-                Cadastra-se
+            <a href="reserva.php" class="btn btn-dark col-2">
+                Reservar Agora!
             </a>
         </div>
     </main>

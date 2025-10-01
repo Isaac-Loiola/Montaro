@@ -96,7 +96,11 @@ class Usuario{
         $cmd->bindValue(":senha", $senhaInformada);
         $cmd->execute();    
 
-       return $dados = $cmd->fetch(PDO::FETCH_ASSOC);        
+        $dados = $cmd->fetch(PDO::FETCH_ASSOC); 
+        if($dados == false){
+            return $dados = [];
+        }       
+        return $dados;
     }
 
     public function atualizar(int $idUpdate){
