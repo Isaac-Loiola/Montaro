@@ -1,8 +1,12 @@
 <?php 
+include_once "../php/class/horario.php";
     if($_POST){
         $message = "Olá Isaac tudo bem ? Você realizou uma reserva na montaro";
         mail('isaacoliveirakopi@gmail.com', 'Reserva Montaro' , $message);
     }
+
+    $horario = new Horario();
+    $horariosDisponiveis = $horario->obterDisponiveis();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -56,7 +60,9 @@
                             Hora:
                         </label>
                         <select name="hora" id="hora" required>
-                            <option value="12:30" default>12:30</option>
+                            <?php foreach($horariosDisponiveis as $hr):?>
+                                <option value="<?= $hr['horario']?>"><?= $hr['horario']?></option>
+                            <?php endforeach;?>
                         </select>
                     </div>
                     <div class="input-group ">
