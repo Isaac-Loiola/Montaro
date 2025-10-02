@@ -33,12 +33,25 @@ AUTO_INCREMENT = 2;
 
 
 -- -----------------------------------------------------
+-- Table `tdszuphpdb01`.`horarios`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `tdszuphpdb01`.`horarios` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `horario` TIME NOT NULL,
+  `disponivel` BIT(1) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 32;
+
+
+-- -----------------------------------------------------
 -- Table `tdszuphpdb01`.`mesas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `tdszuphpdb01`.`mesas` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `numero` CHAR(3) NOT NULL,
   `capacidade` INT(11) NOT NULL,
+  `disponivel` BIT(1) NOT NULL DEFAULT b'1',
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -107,13 +120,17 @@ CREATE TABLE IF NOT EXISTS `tdszuphpdb01`.`reservas` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `id_cliente` INT(11) NOT NULL,
   `data_reserva` DATE NOT NULL,
-  `horario_reserva` TIME NOT NULL,
+  `id_horario` INT(11) NOT NULL,
   `data_criacao` DATETIME NULL DEFAULT CURRENT_TIMESTAMP(),
   PRIMARY KEY (`id`),
   INDEX `id_cliente` (`id_cliente` ASC) VISIBLE,
+  INDEX `id_horario` (`id_horario` ASC) VISIBLE,
   CONSTRAINT `reservas_ibfk_1`
     FOREIGN KEY (`id_cliente`)
-    REFERENCES `tdszuphpdb01`.`clientes` (`id`))
+    REFERENCES `tdszuphpdb01`.`clientes` (`id`),
+  CONSTRAINT `reservas_ibfk_2`
+    FOREIGN KEY (`id_horario`)
+    REFERENCES `tdszuphpdb01`.`horarios` (`id`))
 ENGINE = InnoDB;
 
 
