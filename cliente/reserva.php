@@ -7,6 +7,11 @@ include_once "../php/class/horario.php";
 
     $horario = new Horario();
     $horariosDisponiveis = $horario->obterDisponiveis();
+
+    $hoje = new DateTime();
+
+    $prazo = new DateTime();
+    $prazo->modify('+90 days');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -53,7 +58,11 @@ include_once "../php/class/horario.php";
                         <label>
                             Data:
                         </label>
-                        <input type="date" name="data" id="data">
+                        <input type="date" 
+                                name="data" 
+                                id="data" 
+                                min="<?=$hoje->format("Y-m-d")?>;" 
+                                max="<?=$prazo->format("Y-m-d")?>;">
                     </div>
                     <div class="input-group  d-flex flex-column">
                         <label>
