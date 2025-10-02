@@ -1,3 +1,9 @@
+<?php 
+    if($_POST){
+        $message = "Olá Isaac tudo bem ? Você realizou uma reserva na montaro";
+        mail('isaacoliveirakopi@gmail.com', 'Reserva Montaro' , $message);
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,13 +25,13 @@
 </head>
 <body>
     <header class="mb-5">
-        <?php include "../php/menu_publico.php"?>
+        
     </header>
     <main class="container py-5 d-flex justify-content-center align-items-center">
         <div class="card-reserva shadow-lg col-10 col-lg-6 mt-5 p-5">
             <h2>Reservar</h2>
             <p>Realize a sua reserva agora mesmo!</p>
-            <form action="cadastroUsuario.php" method="post" class="inputs d-flex flex-column gap-5">
+            <form action="reserva.php" method="post" class="inputs d-flex flex-column gap-5">
                 <div class="input-group  d-flex flex-column">
                         <label>
                             Numero de pessoas:
@@ -54,7 +60,7 @@
                         </select>
                     </div>
                     <div class="input-group ">
-                        <button type="submit" name="cadastro" id="cadastro" class="btn btn-dark">
+                        <button type="submit" name="reserva" id="reserva" class="btn btn-dark">
                             Finalizar
                         </button>
                     </div>
