@@ -25,7 +25,7 @@ if(isset($_SESSION)){
 </head>
 <body class="d-flex flex-column gap-5">
     <header class="py-2">
-        <?php include "menu_publico.php"?>
+        <?php include "../php/menu_publico.php"?>
     </header>
     <main class="py-5 container ">
         <div class="d-flex flex-column mt-5">
