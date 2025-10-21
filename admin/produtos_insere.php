@@ -43,6 +43,8 @@ if($_POST){
 <link rel="stylesheet" href="../css/estilo.css">
 <!-- Bootstrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<script src="../js/script.js" defer></script>
+
 <title>Produto - Insere</title>
 </head>
 <body>
@@ -126,7 +128,10 @@ if($_POST){
                                     class="form-control" required min="0" step="0.01">
 </div>
 </div>
- 
+
+<div class="alert alert-danger"  hidden role="alert" id="alertaMenor">
+        O Valor não pode ser abaixo de R$0,00
+</div> 
                         <!-- Imagem -->
 <div class="mb-3">
 <label for="imagemfile" class="form-label">Imagem:</label>
