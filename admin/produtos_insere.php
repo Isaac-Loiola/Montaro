@@ -129,8 +129,15 @@ if($_POST){
 </div>
 </div>
 
-<div class="alert alert-danger"  hidden role="alert" id="alertaMenor">
-        O Valor não pode ser abaixo de R$0,00
+<div class="alert alert-danger"  hidden role="alert" id="alerta_minimo">
+        O preço não pode ser menor ou igual a R$0,00
+</div> 
+
+<div class="alert alert-danger"  hidden role="alert" id="alerta_maximo">
+        O preço máximo é de R$999,99 
+</div> 
+<div class="alert alert-danger"  hidden role="alert" id="alerta_letra">
+        Formato de preço inválido
 </div> 
                         <!-- Imagem -->
 <div class="mb-3">
