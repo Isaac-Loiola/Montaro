@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `tdszuphpdb01`.`clientes` (
   `senha` VARCHAR(32) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 2;
+AUTO_INCREMENT = 0;
 
 
 -- -----------------------------------------------------
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `tdszuphpdb01`.`horarios` (
   `disponivel` BIT(1) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 32;
+AUTO_INCREMENT = 0;
 
 
 -- -----------------------------------------------------
@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `tdszuphpdb01`.`tipos` (
   `rotulo` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 7;
+AUTO_INCREMENT = 0;
 
 
 -- -----------------------------------------------------
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `tdszuphpdb01`.`produtos` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
-AUTO_INCREMENT = 18;
+AUTO_INCREMENT = 0;
 
 
 -- -----------------------------------------------------
