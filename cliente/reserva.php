@@ -62,13 +62,14 @@ include_once "../php/class/horario.php";
                                 name="data" 
                                 id="data" 
                                 min="<?=$hoje->format("Y-m-d")?>;" 
-                                max="<?=$prazo->format("Y-m-d")?>;">
+                                max="<?=$prazo->format("Y-m-d")?>;"
+                                disabled>
                     </div>
                     <div class="input-group  d-flex flex-column">
                         <label>
                             Hora:
                         </label>
-                        <select name="hora" id="hora" required>
+                        <select name="hora" id="hora" disabled required>
                             <?php foreach($horariosDisponiveis as $hr):?>
                                 <option value="<?= $hr['horario']?>"><?= $hr['horario']?></option>
                             <?php endforeach;?>
