@@ -49,3 +49,13 @@ let alertaLet = document.getElementById("alerta_letra"); // alerta letra.
             alertaLet.hidden = true;
         }
     })
+
+
+// fetch API 
+
+const URL = "../php/api/fetch.php";
+
+async function callApi(){
+    const response = await fetch(URL);
+    console.log(response);
+}
