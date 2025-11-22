@@ -1,17 +1,9 @@
 <?php 
-include_once "../php/class/horario.php";
     if($_POST){
         $message = "Olá Isaac tudo bem ? Você realizou uma reserva na montaro";
         mail('isaacoliveirakopi@gmail.com', 'Reserva Montaro' , $message);
     }
 
-    $horario = new Horario();
-    $horariosDisponiveis = $horario->obterDisponiveis();
-
-    $hoje = new DateTime();
-
-    $prazo = new DateTime();
-    $prazo->modify('+90 days');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -34,7 +26,7 @@ include_once "../php/class/horario.php";
 </head>
 <body>
     <header class="mb-5">
-        <?php include "../php/menu_publico.php"?>
+        <?php include "../php/menu_publico.php"?>\
     </header>
     <main class="container py-5 d-flex justify-content-center align-items-center">
         <div class="card-reserva shadow-lg col-10 col-lg-6 mt-5 p-5">
@@ -61,18 +53,16 @@ include_once "../php/class/horario.php";
                         <input type="date" 
                                 name="data" 
                                 id="data" 
-                                min="<?=$hoje->format("Y-m-d")?>;" 
-                                max="<?=$prazo->format("Y-m-d")?>;"
-                                disabled>
+                                min="" 
+                                max=""
+                                >
                     </div>
                     <div class="input-group  d-flex flex-column">
                         <label>
                             Hora:
                         </label>
                         <select name="hora" id="hora" disabled required>
-                            <?php foreach($horariosDisponiveis as $hr):?>
-                                <option value="<?= $hr['horario']?>"><?= $hr['horario']?></option>
-                            <?php endforeach;?>
+                            
                         </select>
                     </div>
                     <div class="input-group ">

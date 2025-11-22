@@ -4,14 +4,14 @@
         if( $pdo === null){
             $pdo = new PDO(
                 // senha desktop
-                // "mysql:host=127.0.0.1;dbname=tdszuphpdb01", 
-                // "root", 
-                // "adsz..XcW21034",
+                "mysql:host=127.0.0.1;dbname=tdszuphpdb01", 
+                "root", 
+                "adsz..XcW21034",
 
                 // senha senac
-                "mysql:host=10.91.47.77;dbname=tdszuphpdb01", 
-                "root", 
-                "123",
+                // "mysql:host=10.91.47.77;dbname=tdszuphpdb01", 
+                // "root", 
+                // "123",
 
                 // // senha notebook
                 // "mysql:host=127.0.0.1;dbname=tdszuphpdb01", 
