@@ -1,8 +1,6 @@
 <?php 
     $dados = [
-        'nome' => 'Exemplo',
-        'idade' => 30,
-        'cidade' => 'São Paulo'
+        '1', '2', '3', '4'
     ];
     $json = json_encode($dados);
 
