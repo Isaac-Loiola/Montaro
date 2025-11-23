@@ -1,10 +1,8 @@
 const date = document.getElementById("data");
 const hour = document.getElementById("hora")
 
-const URL = "http://127.0.0.1/montaro/php/api/fetch.php";
-
-async function callApi() {
-    const response = await fetch(URL);
+async function callApi(url) {
+    const response = await fetch(url);
     if (response.status == 200) {
         const object = await response.json();
         return object;
@@ -13,7 +11,10 @@ async function callApi() {
 
 
 date.addEventListener("change", async () => {
-    const response = await callApi();
+    let valueDate = date.value.toString();
+    
+    const URL = "http://127.0.0.1/montaro/php/api/fetch.php?data=" + valueDate;
+    const response = await callApi(URL);
 
     response.forEach(element => {
         let option = document.createElement("option");

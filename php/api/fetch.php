@@ -1,8 +1,9 @@
 <?php 
-    $dados = [
-        '1', '2', '3', '4'
-    ];
-    $json = json_encode($dados);
+include_once "../class/reserva.php";
+    $reserva = new Reserva();
+    $horarios = $reserva->obterHorariosPorData($_GET['data']);
+
+    $json = json_encode($horarios);
 
     echo $json; 
 ?>
