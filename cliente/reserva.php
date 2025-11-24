@@ -1,6 +1,13 @@
 <?php 
+include_once "../php/class/reserva.php";
     if($_POST){
-        
+        $reserva = new Reserva();
+        $reserva->idCliente = $_SESSION['id_cliente'];
+        $reserva->quantidade = $_POST['quantidadePessoas'];
+        $reserva->dataReserva = $_POST['data'];
+        $resrva->horarioReserva = $_POST['hora'];
+
+        $reserva->inserir();
     }
 
     // validação de data minima e maxima
@@ -69,7 +76,6 @@
                             Hora:
                         </label>
                         <select name="hora" id="hora" disabled required>
-                            
                         </select>
                     </div>
                     <div class="input-group ">
@@ -77,7 +83,7 @@
                             Finalizar
                         </button>
                     </div>
-                </form>
+            </form>
         </div>
     </main>
 </body>

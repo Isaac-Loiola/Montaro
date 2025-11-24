@@ -4,6 +4,7 @@ include_once "db.php";
 class Reserva{
     public $id;
     public $idCliente;
+    public $quantidade;
     public $dataReserva;
     public $horarioReserva;
     public $dataCriacao;
@@ -16,9 +17,10 @@ class Reserva{
     }
 
     function inserir() {
-        $sql = "insert reservas values(0, :idcliente, :dataReserva, :horarioReserva, default)";
+        $sql = "insert reservas values(0, :idcliente, :quantidade, :dataReserva, :horarioReserva, default)";
         $cmd = $this->pdo->prepare($sql);
         $cmd->bindValue(":idcliente", $this->idCliente);
+        $cmd->bindvalue(":quantidade", $this->quantidade);
         $cmd->bindValue(":dataReserva", $this->dataReserva);
         $cmd->bindValue(":horarioReserva", $this->horarioReserva);
         return $cmd->execute();
