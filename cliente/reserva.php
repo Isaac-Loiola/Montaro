@@ -1,9 +1,15 @@
 <?php 
     if($_POST){
-        $message = "Olá Isaac tudo bem ? Você realizou uma reserva na montaro";
-        mail('isaacoliveirakopi@gmail.com', 'Reserva Montaro' , $message);
+        
     }
 
+    // validação de data minima e maxima
+    $dataMin = new DateTime('now');
+    $dataMin->modify('+3 days');
+    // $dataMin = $hoje->modify('+3 days');
+
+    $dataMax = new DateTime('now');
+    $dataMax->modify('+90 days');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -54,8 +60,8 @@
                         <input type="date" 
                                 name="data" 
                                 id="data" 
-                                min="" 
-                                max=""
+                                min="<?=  $dataMin->format('Y-m-d') ?>" 
+                                max="<?= $dataMax->format('Y-m-d') ?>"
                                 >
                     </div>
                     <div class="input-group  d-flex flex-column">
