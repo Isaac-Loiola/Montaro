@@ -17,7 +17,7 @@ class Horario{
         $sql = "select horario from horarios";
         $cmd = $this->pdo->prepare($sql);
         $cmd->execute();
-        return $cmd->fetch(PDO::FETCH_ASSOC);
+        return $cmd->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 ?>
