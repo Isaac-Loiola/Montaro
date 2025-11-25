@@ -38,7 +38,7 @@ class Reserva{
     }
 
     function obterHorariosPorData($data) : array{
-        $sql = "select horario from reservas where data = $data";
+        $sql = "select horario from reservas where data = '$data'";
         $cmd = $this->pdo->prepare($sql);
         $cmd->execute();
         $horarios = $cmd->fetch(PDO::FETCH_ASSOC);

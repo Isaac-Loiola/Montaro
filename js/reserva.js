@@ -16,10 +16,11 @@ date.addEventListener("change", async () => {
     const URL = "http://127.0.0.1/montaro/php/api/fetch.php?data=" + valueDate;
     const response = await callApi(URL);
 
+    console.log(response);
     response.forEach(element => {
         let option = document.createElement("option");
         option.value = element['horario'];
-        option.textContent = element['horario'].toString().slice(0,5);
+        option.textContent = element['horario'].toString().slice(0, 5);
 
         hour.appendChild(option);
     });
