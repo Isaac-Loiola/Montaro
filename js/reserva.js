@@ -9,14 +9,14 @@ async function callApi(url) {
     }
 }
 
-
 date.addEventListener("change", async () => {
+    // apaga todos os options
+    hour.replaceChildren();
     let valueDate = date.value.toString();
     
     const URL = "http://127.0.0.1/montaro/php/api/fetch.php?data=" + valueDate;
     const response = await callApi(URL);
 
-    console.log(response);
     response.forEach(element => {
         let option = document.createElement("option");
         option.value = element['horario'];
