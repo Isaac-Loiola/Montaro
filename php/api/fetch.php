@@ -16,7 +16,7 @@ include_once "../class/horario.php";
 
     foreach($horariosReservas as $horario){
         for($i = 0; $i <= count($horarios);$i ++){
-            if((string)$horario == (string)$horarios[$i]['horario']){
+            if((string)$horario['horario'] == (string)$horarios[$i]['horario']){
                 unset($horariosDisponiveis[$i]);
                 break;
             }

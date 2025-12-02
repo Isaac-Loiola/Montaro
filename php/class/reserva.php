@@ -41,7 +41,7 @@ class Reserva{
         $sql = "select horario from reservas where data = '$data'";
         $cmd = $this->pdo->prepare($sql);
         $cmd->execute();
-        $horarios = $cmd->fetch(PDO::FETCH_ASSOC);
+        $horarios = $cmd->fetchAll(PDO::FETCH_ASSOC);
         if(!$horarios){
             $horarios = [];
         }
