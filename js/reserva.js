@@ -19,7 +19,7 @@ date.addEventListener("change", async () => {
 
     response.forEach(element => {
         let option = document.createElement("option");
-        option.value = element['horario'];
+        option.value = element['id'];
         option.textContent = element['horario'].toString().slice(0, 5);
 
         hour.appendChild(option);

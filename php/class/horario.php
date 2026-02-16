@@ -14,7 +14,7 @@ class Horario{
 
 
     function listar() : array{
-        $sql = "select horario from horarios";
+        $sql = "select id, horario from horarios";
         $cmd = $this->pdo->prepare($sql);
         $cmd->execute();
         return $cmd->fetchAll(PDO::FETCH_ASSOC);
