@@ -9,7 +9,7 @@
 
         <nav class="navbar navbar-expand-xl fixed-top ">
            <div class="container-fluid">
-               <a href="index.php" class="navbar-brand">
+               <a href="../php/index.php" class="navbar-brand">
                    <img src="../images/logo/montaro-logo-white.png" alt>
                </a>
                <button class="navbar-toggler" 
@@ -25,32 +25,32 @@
                <div class="collapse navbar-collapse" id="menuPublico">
                    <ul class="navbar-nav ms-auto mb-2 mb-md-0 gap-2" >
                        <li class="nav-item">
-                           <a href="index.html" class="nav-link active" aria-current="page">
+                           <a href="../php/index.php" class="nav-link active" aria-current="page">
                                <i class="bi bi-house-door-fill text-white"></i>
                            </a>
                        </li>
                        <li class="nav-item ">
-                           <a href="#about-us" class="nav-link text-white">
+                           <a href="../php/index.php#about-us" class="nav-link text-white">
                                Sobre nós
                            </a>
                        </li>
                        <li class="nav-item ">
-                           <a href="#nossosvalores" class="nav-link text-white">
+                           <a href="../php/index.php#nossosvalores" class="nav-link text-white">
                                Valores
                            </a>
                        </li>
                        <li class="nav-item ">
-                        <a href="#oquenostorna" class="nav-link text-white">
+                        <a href="../php/index.php#oquenostorna" class="nav-link text-white">
                             Única
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a href="#" class="nav-link text-white">
+                        <a href="../php/index.php#destques" class="nav-link text-white">
                             Destaques
                         </a>
                     </li>
                        <li class="nav-item">
-                           <a href="#products" class="nav-link text-white">
+                           <a href="../php/index.php#produtos" class="nav-link text-white">
                                Produtos
                            </a>
                        </li>

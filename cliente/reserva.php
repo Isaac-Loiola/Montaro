@@ -48,7 +48,7 @@ include_once "../php/class/reserva.php";
 </head>
 <body>
     <header class="mb-5">
-        <!-- <?php include "../php/menu_publico.php"?>\ -->
+        <?php include "../php/menu_publico.php"?>\
     </header>
     <main class="container py-5 d-flex justify-content-center align-items-center">
         <div class="card-reserva shadow-lg col-10 col-lg-6 mt-5 p-5">
