@@ -46,7 +46,7 @@ if(isset($_SESSION)){
                 Ao seguir essas orientações, você garante que sua reserva será processada corretamente e que poderá aproveitar todos os benefícios da promoção.
             </p>
 
-            <a href="reserva.php" class="btn btn-dark col-2">
+            <a href="verificarLoginUsuarioReserva.php" class="btn btn-dark col-2">
                 Reservar Agora!
             </a>
         </div>

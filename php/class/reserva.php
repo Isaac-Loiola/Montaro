@@ -17,7 +17,7 @@ class Reserva{
     }
 
     function inserir() {
-        $sql = "insert reservas values(0, :idcliente, :quantidade, :dataReserva, :horarioReserva, default)";
+        $sql = "insert reservas values(0, :idcliente, :dataReserva, :horarioReserva, default, :quantidade)";
         $cmd = $this->pdo->prepare($sql);
         $cmd->bindValue(":idcliente", $this->idCliente);
         $cmd->bindvalue(":quantidade", $this->quantidade);
@@ -38,7 +38,7 @@ class Reserva{
     }
 
     function obterHorariosPorData($data) : array{
-        $sql = "select horario from reservas where data = '$data'";
+        $sql = "select id_horario from reservas where data_reserva = $data";
         $cmd = $this->pdo->prepare($sql);
         $cmd->execute();
         $horarios = $cmd->fetchAll(PDO::FETCH_ASSOC);

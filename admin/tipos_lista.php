@@ -55,7 +55,7 @@
                             <?= $tip['rotulo']?>
                         </td>
                         <td>
-                            <a href="produtos_atualiza.php?id=<?=$prod['id'] ?>"
+                            <a href="produtos_atualiza.php?id= <?=$prod['id'] ?>
                                class="btn btn-warning btn-sm w-100 mb-1">
                                 <i class="bi bi-arrow-clockwise"></i>
                                 <span class="d-none d-sm-inline"> ALTERAR</span>    

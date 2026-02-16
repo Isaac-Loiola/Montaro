@@ -151,7 +151,7 @@ if($_POST){
  
                         <!-- Botão -->
 <div class="d-grid">
-<input type="submit" name="enviar" id="enviar" class="btn btn-danger w-100" value="Cadastrar">
+<input type="submit" name="enviar" id="enviar" class="btn btn-dark w-100" value="Cadastrar">
 </div>
  
                     </form>

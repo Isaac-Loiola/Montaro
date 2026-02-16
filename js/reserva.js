@@ -11,7 +11,7 @@ async function callApi(url) {
 
 date.addEventListener("change", async () => {
     // apaga todos os options
-    hour.replaceChildren();
+    hour.replaceChildren(); 
     let valueDate = date.value.toString();
     
     const URL = "http://127.0.0.1/montaro/php/api/fetch.php?data=" + valueDate;

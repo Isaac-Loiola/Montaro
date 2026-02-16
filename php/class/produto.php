@@ -146,7 +146,7 @@ class Produto{
             resumo = :resumo, 
             valor = :valor, 
             imagem = :imagem,
-            destaque = ".($this->destaque==true?1:0)."
+            destaque = :destaque
             where id = :id";
 
         $cmd = $this->pdo->prepare($sql);
@@ -155,7 +155,7 @@ class Produto{
         $cmd->bindValue(":resumo", $this->resumo);
         $cmd->bindValue(":valor", $this->valor);
         $cmd->bindValue(":imagem", $this->imagem);
-        // $cmd->bindValue(":destaque", $this->destaque==true?1:0);
+        $cmd->bindValue(":destaque", $this->destaque==true?1:0);
         $cmd->bindValue(":id", $this->id, PDO::PARAM_INT);
 
         return $cmd->execute();

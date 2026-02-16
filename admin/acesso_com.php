@@ -10,7 +10,7 @@ session_start();
 
 if(!isset($_SESSION['login_usuario'])){
 
-    header('location:login.php');
+    header('location: ../admin/login.php');
     exit;
 }
 

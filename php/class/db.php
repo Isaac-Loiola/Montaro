@@ -4,7 +4,7 @@
         if( $pdo === null){
             $pdo = new PDO(
                 // senha desktop
-                "mysql:host=127.0.0.1;dbname=tdszuphpdb01", 
+                "mysql:host=127.0.0.1;dbname=montaro", 
                 "root", 
                 "",
 

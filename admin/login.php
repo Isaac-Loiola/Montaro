@@ -9,41 +9,27 @@ if($_POST){
         $user = new Usuario();
 
         $usuarioLogado = $user->efetuarLogin($login, $senha);
-        
-        if(count($usuarioLogado)  == 0){
-                $cli = new Cliente();
-                $cliente = $cli->efetuarLogin($login, $senha);
-                if(count($cliente) == 0){
-
+        if(count($usuarioLogado) >0 ){
+                if(!isset($_SESSION)){
+                        session_name('montaro');
+                        session_start();
                 }
-                else{
-                        if(!isset($_SESSION)){
-                                session_name('montaro');
-                                session_start();
-                        }
-                        $_SESSION['login_usuario'] = $login;
-                        $_SESSION['nome_da_sessao'] = session_name();
-                                header("location: ../cliente/index.php");
-                }
-                
-                                
-        }
-        else{
-                if(count($usuarioLogado) > 0){
-                        if(!isset($_SESSION)){
-                                session_name('montaro');
-                                session_start();
-                        }
-                }
-        
                 $_SESSION['login_usuario'] = $usuarioLogado['login'];
                 $_SESSION['nivel_usuario'] = $usuarioLogado['nivel'];
+                $_SESSION['id_usuario'] = (int)$usuarioLogado['id'];
                 $_SESSION['nome_da_sessao'] = session_name();
+                session_start();
+                
                 if($usuarioLogado['nivel'] == "adm"){
-                        echo "<script>window.open('index.php', '_self')</script>";
+                        echo "<script>window.open('index.php','_self')</script>";
+                }
+                else{
+                        echo "<script>window.open('../cliente.index.php','_self')</script>";
                 }
         }
+
 }
+
 ?>
 
 

@@ -1,12 +1,16 @@
 <?php 
+include '../admin/acesso_com.php';
+
+// include 'verificarLoginUsuarioReserva.php';
 include_once "../php/class/reserva.php";
+
+
     if($_POST){
         $reserva = new Reserva();
-        $reserva->idCliente = $_SESSION['id_cliente'];
+        $reserva->idCliente = $_SESSION['id_usuario'];
         $reserva->quantidade = $_POST['quantidadePessoas'];
         $reserva->dataReserva = $_POST['data'];
-        $resrva->horarioReserva = $_POST['hora'];
-
+        $reserva->horarioReserva = $_POST['hora'];
         $reserva->inserir();
     }
 
@@ -40,7 +44,7 @@ include_once "../php/class/reserva.php";
 </head>
 <body>
     <header class="mb-5">
-        <?php include "../php/menu_publico.php"?>\
+        <!-- <?php include "../php/menu_publico.php"?>\ -->
     </header>
     <main class="container py-5 d-flex justify-content-center align-items-center">
         <div class="card-reserva shadow-lg col-10 col-lg-6 mt-5 p-5">

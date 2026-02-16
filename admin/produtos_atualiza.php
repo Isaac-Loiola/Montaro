@@ -26,7 +26,7 @@ include_once '../php/class/tipo.php';
         $produto->setValor($_POST['valor']);
         $produto->setImagem($nome_img);
         
-        $produto->atualizar($_POST['id']);
+        $produto->atualizar((int)$_POST['id']);
 
         header('location: produtos_lista.php');
     }
@@ -162,11 +162,14 @@ include_once '../php/class/tipo.php';
                             </div>
                             <img src="" id="imagem" class="img-fluid mt-2" style="display:none; max-height:150px;">
                         </div>
+                        <div hidden class="">
+                            <input name="id" value="<?= $prod['id'] ?>" type="text">
+                        </div>
  
                         <!-- Botão -->
                         <div class="d-grid">
                             <input type="submit" name="atualizar" id="atualizar"
-                                   class="btn btn-danger w-100" value="Atualizar">
+                                   class="btn btn-dark w-100" value="Atualizar">
                         </div>
                     </form>
                 </div>

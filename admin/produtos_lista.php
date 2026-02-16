@@ -28,7 +28,7 @@ include_once "../php/class/produto.php";
     <?php include 'menu_adm.php'; ?>
     <main class="container my-4">
         <h1 class="">Lista de Produtos</h1>
-        <table class="table table-hover table-sm table-striped table-warning align-middle">
+        <table class="table table-striped border-light">
             <thead class="table-dark">
                 <tr class="p-5">
                     <th class="d-none">ID</th>
