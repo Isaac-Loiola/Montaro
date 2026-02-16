@@ -113,16 +113,20 @@ footer{
 }
 
 .container-reserva{
-    background-color: #ffff;
+    background-color: #000;
     border-radius: 15px;
 }
 
 .paragraph-reserva{
     font-size: 1.5rem;
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 .card-login{
     
+}
+
+.icon-alert{
+    width: 120px;
 }

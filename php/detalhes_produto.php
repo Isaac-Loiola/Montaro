@@ -60,7 +60,7 @@
                         </p>
                         <div class="d-flex gap-3 align-self-center">
                             <?="R$ ".number_format($prod['valor'], 2, ',', '.')?>
-                            <a href="detalhes_produto.php?id=<?= $prod['id'] ?>" class="btn btn-dark">
+                            <a href="../cliente/reserva.php" class="btn btn-dark">
                                 <span class="d-none d-sm-inline">Adquirir</span> &nbsp;
                             </a>
                         </div>

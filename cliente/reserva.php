@@ -11,7 +11,11 @@ include_once "../php/class/reserva.php";
         $reserva->quantidade = $_POST['quantidadePessoas'];
         $reserva->dataReserva = $_POST['data'];
         $reserva->horarioReserva = $_POST['hora'];
+        $reserva->motivo = $_POST['motivo'];
         $reserva->inserir();
+
+        echo "<script>window.open('../php/index.php','_self')</script>";
+
     }
 
     // validação de data minima e maxima
@@ -62,6 +66,18 @@ include_once "../php/class/reserva.php";
                             <option value="4">4 Pessoas</option>
                             <option value="5">5 Pessoas</option>
                             <option value="6">6 Pessoas</option>
+                        </select>
+                    </div>
+                    <div class="input-group d-flex flex-column">
+                        <label>
+                            Motivo:
+                        </label>
+                        <select name="motivo" id="motivo">
+                            <option value="Não informado" selected disabled>Selecione o motivo da reserva</option>
+                            <option value="Aniversário" >Aniversário</option>
+                            <option value="Almoço" >Almoço</option>
+                            <option value="confraternização" >Confraternização</option>
+                            <option value="Jantar em familia" >Jantar em família</option>
                         </select>
                     </div>
                     <div class="input-group  d-flex flex-column">

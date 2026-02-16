@@ -8,6 +8,7 @@ class Reserva{
     public $dataReserva;
     public $horarioReserva;
     public $dataCriacao;
+    public $motivo;
 
     private $pdo;
 
@@ -17,12 +18,13 @@ class Reserva{
     }
 
     function inserir() {
-        $sql = "insert reservas values(0, :idcliente, :dataReserva, :horarioReserva, :quantidade, default)";
+        $sql = "insert reservas values(0, :idcliente, :dataReserva, :horarioReserva, :quantidade, default, :motivo)";
         $cmd = $this->pdo->prepare($sql);
         $cmd->bindValue(":idcliente", $this->idCliente);
         $cmd->bindvalue(":quantidade", $this->quantidade);
         $cmd->bindValue(":dataReserva", $this->dataReserva);
         $cmd->bindValue(":horarioReserva", $this->horarioReserva);
+        $cmd->bindValue(":motivo", $this->motivo);
         return $cmd->execute();
     }
 
