@@ -8,7 +8,7 @@ session_start();
 
 // 2 - Segurança: verificar se a sessão é valida
 
-if(!isset($_SESSION['login_usuario'])){
+if(!isset($_SESSION['email'])){
 
     header('location: ../admin/login.php');
     exit;

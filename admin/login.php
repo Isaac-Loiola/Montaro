@@ -4,27 +4,29 @@ include_once "../php/class/usuario.php";
 include_once "../php/class/cliente.php";
 
 if($_POST){
-        $login = $_POST['login'];
+        $email = $_POST['email'];
         $senha = $_POST['senha'];
         $user = new Usuario();
 
-        $usuarioLogado = $user->efetuarLogin($login, $senha);
+        $usuarioLogado = $user->efetuarLogin($email, $senha);
+
         if(count($usuarioLogado) >0 ){
                 if(!isset($_SESSION)){
                         session_name('montaro');
                         session_start();
                 }
-                $_SESSION['login_usuario'] = $usuarioLogado['login'];
+                $_SESSION['email'] = $usuarioLogado['email'];
                 $_SESSION['nivel_usuario'] = $usuarioLogado['nivel'];
+                $_SESSION['nome_usuario'] = $usuarioLogado['nome'];
                 $_SESSION['id_usuario'] = (int)$usuarioLogado['id'];
                 $_SESSION['nome_da_sessao'] = session_name();
-                session_start();
+                // session_start();
                 
                 if($usuarioLogado['nivel'] == "adm"){
                         echo "<script>window.open('index.php','_self')</script>";
                 }
                 else{
-                        echo "<script>window.open('../cliente.index.php','_self')</script>";
+                        echo "<script>window.open('../cliente/index.php','_self')</script>";
                 }
         }
 
@@ -75,14 +77,14 @@ if($_POST){
         <form action="login.php" name="form_login" id="form_login" method="POST" enctype="multipart/form-data">
         <!-- Login -->
         <div class="mb-3">
-        <label for="login" class="form'-label">Login:</label>
+        <label for="email" class="form'-label">E-mail:</label>
         <div class="input-group">
         <span class="input-group-text">
         <i class="bi bi-person-fill text-info"></i>
         </span>
-        <input type="text" name="login" id="login" 
+        <input type="text" name="email" id="email" 
                 class="form-control" 
-                placeholder="Digite seu login" 
+                placeholder="Digite seu e-mail" 
                 autofocus required autocomplete="off">
         </div>
         </div>

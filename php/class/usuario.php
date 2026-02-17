@@ -87,18 +87,20 @@ class Usuario{
         return false;
     }
 
-    public function efetuarLogin(string $loginInformado, string $senhaInformada) : array{
-        $sql = "select * from usuarios where login = :login and senha = :senha)";
+    public function efetuarLogin(string $emailInformado, string $senhaInformada) : array{
+        $sql = "select * from usuarios where email = :email limit 1";
         $cmd = $this->pdo->prepare($sql);
-        $cmd->bindValue(":login", $loginInformado);
-        $cmd->bindValue(":senha", $senhaInformada);
-        $cmd->execute();    
-
-        $dados = $cmd->fetch(PDO::FETCH_ASSOC); 
-        if($dados == false){
-            return $dados = [];
-        }       
-        return $dados;
+        $cmd->bindValue(':email', $emailInformado);
+        $cmd->execute();
+        $user = $cmd->fetch(PDO::FETCH_ASSOC);
+        if($user){
+            if(password_verify($senhaInformada, $user['senha'])){
+                $user['senha'] = "";
+                return $user;
+            }
+        }
+        $user = [];
+        return $user;
     }
 
     public function atualizar(int $idUpdate){
