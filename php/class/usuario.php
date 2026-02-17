@@ -80,7 +80,7 @@ class Usuario{
             $this->nivel = $dados['nivel'];
             $this->nome = $dados['nome'];
             $this->email = $dados['email'];
-            $this->cpf = $dados['email'];
+            $this->cpf = $dados['cpf'];
 
             return true;
         }

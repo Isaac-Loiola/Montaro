@@ -15,7 +15,7 @@ if($_POST){
                         session_name('montaro');
                         session_start();
                 }
-                $_SESSION['email'] = $usuarioLogado['email'];
+                $_SESSION['email_usuario'] = $usuarioLogado['email'];
                 $_SESSION['nivel_usuario'] = $usuarioLogado['nivel'];
                 $_SESSION['nome_usuario'] = $usuarioLogado['nome'];
                 $_SESSION['id_usuario'] = (int)$usuarioLogado['id'];

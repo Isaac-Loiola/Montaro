@@ -8,10 +8,9 @@ session_start();
 
 // 2 - Segurança: verificar se a sessão é valida
 
-if(!isset($_SESSION['email_usuario'])){
+if(!isset($_SESSION['nivel_usuario']) == 'cli'){
 
-    header('location: ../admin/login.php');
-    exit;
+        header('location: ../admin/login.php');
 }
 
 // $_SESSION['nome_da_sessao'] = "troquei_memu";
