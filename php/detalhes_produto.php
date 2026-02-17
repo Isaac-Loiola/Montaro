@@ -36,7 +36,7 @@
 
     <main class="container d-flex flex-column"> 
         <h2 class="pt-5 mb-5">
-            <a href="index.php" class="text-decoration-none text-dark ">
+            <a href="../php/index.php#produtos" class="text-decoration-none text-dark ">
                 <i class="bi bi-caret-left-fill mb-5"></i>
                 Detalhes do Produto - <?= $prod['descricao']; ?>
             </a>

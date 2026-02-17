@@ -1,16 +1,16 @@
 <?php 
-include_once "../php/class/cliente.php";
+include_once "../php/class/usuario.php";
     
     if($_POST){
-        $cliente = new Cliente();
-        $cliente->nome = $_POST['nome'];
-        $cliente->cpf = $_POST['cpf'];
-        $cliente->email = $_POST['email'];
-        $cliente->telefone = $_POST['telefone'];
-        $cliente->senha = $_POST['senha'];
-
-        if($cliente->inserir()){
-            header("location:index.php");
+        $usuario = new Usuario();
+        $usuario->senha = $_POST['senha'];
+        $usuario->nivel = 'cli';
+        $usuario->nome = $_POST['nome'];
+        $usuario->email = $_POST['email'];
+        $usuario->cpf = $_POST['cpf'];
+        
+        if($usuario->inserir()){
+            header("location: ../admin/index.php");
         }
     }
 
@@ -52,9 +52,6 @@ include_once "../php/class/cliente.php";
                     </div>
                     <div class="input-group">
                         <input type="mail" name="email" id="email" placeholder="Email"  maxlength="90" class="input-text" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" name="telefone" id="telefone" placeholder="Telefone" maxlength="11" class="input-text" required>
                     </div>
                     <div class="input-group">
                         <input type="text" name="senha" id="senha" placeholder="Senha" class="input-text" required>
