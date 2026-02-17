@@ -1,5 +1,5 @@
 <?php 
-include '../admin/acesso_com.php';
+// include '../admin/acesso_com.php';
 
 // include 'verificarLoginUsuarioReserva.php';
 include_once "../php/class/reserva.php";
@@ -7,7 +7,7 @@ include_once "../php/class/reserva.php";
 
     if($_POST){
         $reserva = new Reserva();
-        $reserva->idCliente = $_SESSION['id_usuario'];
+        $reserva->idCliente = (int)$_SESSION['id_usuario'];
         $reserva->quantidade = $_POST['quantidadePessoas'];
         $reserva->dataReserva = $_POST['data'];
         $reserva->horarioReserva = $_POST['hora'];
