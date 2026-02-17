@@ -1,6 +1,9 @@
 <?php 
-    include "acesso_com.php";
-    include "../php/class/tipo.php";
+include "acesso_com.php";
+include_once 'verificador.php';
+
+
+include "../php/class/tipo.php";
 
     if($_POST){
         if(isset($_POST['enviar'])){

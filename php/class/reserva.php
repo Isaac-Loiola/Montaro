@@ -20,7 +20,7 @@ class Reserva{
     function inserir() {
         $sql = "insert reservas values(0, :idcliente, :dataReserva, :horarioReserva, :quantidade, default, :motivo)";
         $cmd = $this->pdo->prepare($sql);
-        $cmd->bindValue(":idcliente", $this->idCliente);
+        $cmd->bindValue(":idcliente", (int)$this->idCliente);
         $cmd->bindvalue(":quantidade", $this->quantidade);
         $cmd->bindValue(":dataReserva", $this->dataReserva);
         $cmd->bindValue(":horarioReserva", $this->horarioReserva);

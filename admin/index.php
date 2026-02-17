@@ -1,5 +1,6 @@
 <?php 
 include "acesso_com.php";
+include_once 'verificador.php';
 
 ?>
 <!DOCTYPE html>

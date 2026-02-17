@@ -10,7 +10,9 @@ if($_POST){
 
         $usuarioLogado = $user->efetuarLogin($email, $senha);
 
-        if(count($usuarioLogado) >0 ){
+        if(count($usuarioLogado) > 0 ){
+                // print_r($usuarioLogado);
+                // exit;
                 if(!isset($_SESSION)){
                         session_name('montaro');
                         session_start();
@@ -18,18 +20,16 @@ if($_POST){
                 $_SESSION['email_usuario'] = $usuarioLogado['email'];
                 $_SESSION['nivel_usuario'] = $usuarioLogado['nivel'];
                 $_SESSION['nome_usuario'] = $usuarioLogado['nome'];
-                $_SESSION['id_usuario'] = (int)$usuarioLogado['id'];
+                $_SESSION['id_usuario'] = $usuarioLogado['id'];
                 $_SESSION['nome_da_sessao'] = session_name();
-                // session_start();
                 
                 if($usuarioLogado['nivel'] == "adm"){
                         echo "<script>window.open('index.php','_self')</script>";
                 }
-                else{
-                        echo "<script>window.open('../cliente/index.php','_self')</script>";
+                else if($usuarioLogado['nivel'] == "cli"){
+                        echo "<script>window.open('../cliente/reserva.php','_self')</script>";
                 }
         }
-
 }
 
 ?>

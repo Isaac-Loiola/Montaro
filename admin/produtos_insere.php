@@ -1,5 +1,7 @@
 <?php 
 include 'acesso_com.php';
+include_once 'verificador.php';
+
 include_once '../php/class/produto.php';
 include_once '../php/class/tipo.php';
 

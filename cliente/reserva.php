@@ -1,13 +1,12 @@
 <?php 
-// include '../admin/acesso_com.php';
+include_once '../admin/acesso_com.php';
 
 // include 'verificarLoginUsuarioReserva.php';
+
 include_once "../php/class/reserva.php";
-
-
     if($_POST){
         $reserva = new Reserva();
-        $reserva->idCliente = (int)$_SESSION['id_usuario'];
+        $reserva->idCliente = $_SESSION['id_usuario'];
         $reserva->quantidade = $_POST['quantidadePessoas'];
         $reserva->dataReserva = $_POST['data'];
         $reserva->horarioReserva = $_POST['hora'];
@@ -48,7 +47,7 @@ include_once "../php/class/reserva.php";
 </head>
 <body>
     <header class="mb-5">
-        <?php include "../php/menu_publico.php"?>\
+        <!-- <?php include "../php/menu_publico.php"?> -->
     </header>
     <main class="container py-5 d-flex justify-content-center align-items-center">
         <div class="card-reserva shadow-lg col-10 col-lg-6 mt-5 p-5">
@@ -76,7 +75,7 @@ include_once "../php/class/reserva.php";
                             <option value="Não informado" selected disabled>Selecione o motivo da reserva</option>
                             <option value="Aniversário" >Aniversário</option>
                             <option value="Almoço" >Almoço</option>
-                            <option value="confraternização" >Confraternização</option>
+                            <option value="Confraternização" >Confraternização</option>
                             <option value="Jantar em familia" >Jantar em família</option>
                         </select>
                     </div>

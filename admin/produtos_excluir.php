@@ -1,5 +1,7 @@
 <?php 
 include "acesso_com.php";
+include_once 'verificador.php';
+
 include "../php/class/produto.php";
 
     if(isset($_GET)){

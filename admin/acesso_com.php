@@ -4,13 +4,10 @@
 session_name('montaro');
 session_start();
 
-
-
 // 2 - Segurança: verificar se a sessão é valida
 
-if(!isset($_SESSION['nivel_usuario']) || $_SESSION['nivel_usuario']== 'cli'){
-
-        header('location: ../admin/login.php');
+if(!isset($_SESSION['id_usuario'])){
+    header('location: ../admin/login.php');
 }
 
 // $_SESSION['nome_da_sessao'] = "troquei_memu";
@@ -20,8 +17,8 @@ if(!isset($_SESSION['nivel_usuario']) || $_SESSION['nivel_usuario']== 'cli'){
 if(!isset($_SESSION['nome_da_sessao'])){
     
     $_SESSION['nome_da_sessao'] = session_name();
-
-}else if($_SESSION['nome_da_sessao'] !== session_name()){
+}
+else if($_SESSION['nome_da_sessao'] !== session_name()){
     session_destroy();
     header('location:login.php');
     exit;
@@ -34,6 +31,7 @@ if(!isset($_SESSION['ip_usuario'])){
 if(!isset($_SESSION['user_agent'])){
     $_SERVER['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
 }
+
 // 5 - Se IP ou navegador mudaram, invalida a sessão!
 if($_SESSION['ip_usuario'] !== $_SERVER['REMOTE_ADDR'] ||
 $_SERVER['user_agent'] !== $_SERVER['HTTP_USER_AGENT']){
