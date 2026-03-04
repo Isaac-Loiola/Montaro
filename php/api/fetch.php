@@ -2,6 +2,9 @@
 include_once "../class/reserva.php";
 include_once "../class/horario.php";
 
+    header('Control-Access-Allow-Origin: *');
+    header('Control-Access-Allow-Headers: Content-Type, Authorization');
+    
     $reserva = new Reserva();
     $horariosDefinidos = new Horario();
 

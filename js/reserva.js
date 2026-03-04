@@ -11,10 +11,11 @@ async function callApi(url) {
 
 date.addEventListener("change", async () => {
     // apaga todos os options
-    hour.replaceChildren(); 
+    hour.replaceChildren();
     let valueDate = date.value.toString();
-    
-    const URL = "http://127.0.0.1/montaro/php/api/fetch.php?data=" + valueDate;
+    console.log('passou por aqui!');
+
+    const URL = "http://enginehub.com.br/loiola/montaro/php/api/fetch.php?data=" + valueDate;
     const response = await callApi(URL);
 
     response.forEach(element => {
@@ -24,6 +25,7 @@ date.addEventListener("change", async () => {
 
         hour.appendChild(option);
     });
+
 
     hour.disabled = false;
 });
