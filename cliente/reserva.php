@@ -43,6 +43,7 @@ include_once "../php/class/reserva.php";
     <!-- bootstrap javaScript -->
     <script src="../js/bootstrap.min.js" defer></script>
     <script src="../js/bootstrap.bundle.min.js" defer></script>
+
     <script src="../js/reserva.js" defer></script>
 </head>
 <body>

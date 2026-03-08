@@ -15,7 +15,7 @@ date.addEventListener("change", async () => {
     let valueDate = date.value.toString();
     console.log('passou por aqui!');
 
-    const URL = "http://enginehub.com.br/loiola/montaro/php/api/fetch.php?data=" + valueDate;
+    const URL = "https://enginehub.com.br/loiola/montaro/php/api/fetch.php?data=" + valueDate;
     const response = await callApi(URL);
 
     response.forEach(element => {

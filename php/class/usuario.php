@@ -63,7 +63,7 @@ class Usuario{
     }
 
     public function listar() : array{
-        $cmd = $this->pdo->query("select * from usuarios order by id desc");
+        $cmd = $this->pdo->query("select id, nivel, nome, email, cpf from usuarios order by id desc");
         return $cmd->fetchAll();
     }
 

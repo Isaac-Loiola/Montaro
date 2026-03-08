@@ -16,7 +16,7 @@
                <div class="collapse navbar-collapse" id="menuPublico">
                    <ul class="navbar-nav ms-auto mb-2 mb-md-0 gap-2" >
                        <li class="nav-item">
-                           <a href="index.html" class="nav-link active" aria-current="page">
+                           <a href="index.php" class="nav-link active" aria-current="page">
                                <i class="bi bi-house-door-fill text-white"></i>
                            </a>
                        </li>
